@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL -ийн тухай хэдэн зүйл - Ochko&#39;s blog">
+<meta name="twitter:description" content="Үнэгүй, тэгсэн мөртлөө боломжын хурдан, боломжын том өгөгдлын баазыг удирдах чадвартай учраас MySQL өргөн хэрэглэгддэг болов уу. MySQL хэрэглэх анхан шатны хичээлүүд дээр тэр болгон байхгүй ч, анхаарвал зүйтэй гэж бодсон хэдэн зүйлийг бичье. Дараах зүйлсийг мэдэхгүйгээсээ болж олон цагийг үрж, мэдэж аваад олон удаа хэрэглэсэн учраас хэн нэгэнд хэрэг болж юуны магад гэж саналаа.
+Бааз үүсгэхдээ
+Хэрэв монгол текст бааз дотроо хадгалах бол:
+create database mydb character set utf8 collate utf8\_general\_ci; ```гэж үүсгэхээ мартав.">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL -ийн тухай хэдэн зүйл - Ochko&#39;s blog">
+<meta property="og:description" content="Үнэгүй, тэгсэн мөртлөө боломжын хурдан, боломжын том өгөгдлын баазыг удирдах чадвартай учраас MySQL өргөн хэрэглэгддэг болов уу. MySQL хэрэглэх анхан шатны хичээлүүд дээр тэр болгон байхгүй ч, анхаарвал зүйтэй гэж бодсон хэдэн зүйлийг бичье. Дараах зүйлсийг мэдэхгүйгээсээ болж олон цагийг үрж, мэдэж аваад олон удаа хэрэглэсэн учраас хэн нэгэнд хэрэг болж юуны магад гэж саналаа.
+Бааз үүсгэхдээ
+Хэрэв монгол текст бааз дотроо хадгалах бол:
+create database mydb character set utf8 collate utf8\_general\_ci; ```гэж үүсгэхээ мартав.">
+<meta property="og:url" content="http://blog.maahai.com/tech/2007-05-mysql/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Үнэгүй, тэгсэн мөртлөө боломжын хурдан, боломжын том өгөгдлын баазыг удирдах чадвартай учраас MySQL өргөн хэрэглэгддэг болов уу. MySQL хэрэглэх анхан шатны хичээлүүд дээр тэр болгон байхгүй ч, анхаарвал зүйтэй гэж бодсон хэдэн зүйлийг бичье. Дараах зүйлсийг мэдэхгүйгээсээ болж олон цагийг үрж, мэдэж аваад олон удаа хэрэглэсэн учраас хэн нэгэнд хэрэг болж юуны магад гэж саналаа.
+Бааз үүсгэхдээ
+Хэрэв монгол текст бааз дотроо хадгалах бол:
+create database mydb character set utf8 collate utf8\_general\_ci; ```гэж үүсгэхээ мартав.">
+
+<title>MySQL -ийн тухай хэдэн зүйл - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">MySQL -ийн тухай хэдэн зүйл</div>
+  <time class="text-gray-500" datetime="2007-05-08 10:00:00 &#43;08">2007-05-08</time>
+<p>Үнэгүй, тэгсэн мөртлөө боломжын хурдан, боломжын том өгөгдлын баазыг удирдах чадвартай учраас MySQL өргөн хэрэглэгддэг болов уу. MySQL хэрэглэх анхан шатны хичээлүүд дээр тэр болгон байхгүй ч, анхаарвал зүйтэй гэж бодсон хэдэн зүйлийг бичье. Дараах зүйлсийг мэдэхгүйгээсээ болж олон цагийг үрж, мэдэж аваад олон удаа хэрэглэсэн учраас хэн нэгэнд хэрэг болж юуны магад гэж саналаа.</p>
+<p>Бааз үүсгэхдээ<br>
+Хэрэв монгол текст бааз дотроо хадгалах бол:</p>
+<pre><code>create database mydb character set utf8 collate utf8\_general\_ci;
+```гэж үүсгэхээ мартав.  
+  
+Key lenght  
+MySQL -д key lenght гэдэг ойлголт байдаг. Энэ нь түлхүүрийн урт юм. Одоогоор 1000 байтаас ихгүй байна гэсэн хязгаарлалттай. Энэ нь латин character set-тэй хүснэгтийн хувьд 1000 тэмдэгт, харин юникод талбаруудтай хүснэгтийн хувьд хэд гэж бодож байна? Юникод нь 2 байт учраас 500 тэмдэгт байна гэвэл, үгүй юм байна. MySQL-д юникод тэмдэгт 3 байт эзэлдэг учраас 333 байна. Бааз үүсгэхдээ түлхүүрийн уртыг тооцоолох хэрэг гарвал үүнийг анхаарах хэрэгтэй.  
+  
+Repair table  
+Заримдаа table эвдэрдэг. Энэ нь ихэвчлэн тог тасалдаж гэнэт унтрах, үйлдлийн системийн доголдол зэргээс болдог. Ийм тохиолдолд хамгийн түрүүнд авах арга хэмжээ бол эвдэрсэн table-ийн файлаа(юмыг яаж мэдэх вэ) өөр газар хуулж авч байгаад```
+repair table mytable;
+```гээд үзэх хэрэгтэй. Ихэнх тохиолдолд засагдах болно.</code></pre>
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

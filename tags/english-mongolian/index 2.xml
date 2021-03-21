@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>english-mongolian on Ochko&#39;s blog</title>
+    <link>http://blog.maahai.com/tags/english-mongolian/</link>
+    <description>Recent content in english-mongolian on Ochko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Fri, 16 Mar 2007 16:59:00 +0800</lastBuildDate><atom:link href="http://blog.maahai.com/tags/english-mongolian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Babylon -ий толийг Stardict уруу хөрвүүлэх</title>
+      <link>http://blog.maahai.com/tech/2007-03-babylon-stardict/</link>
+      <pubDate>Fri, 16 Mar 2007 16:59:00 +0800</pubDate>
+      
+      <guid>http://blog.maahai.com/tech/2007-03-babylon-stardict/</guid>
+      <description>Виндовсын орчинд Babylon гэж сайн толь бичиг байдаг билээ. Энэ толь нь хэрэглэхэд хялбар бөгөөд маш олон толь бичигтэй, гэхдээ үнэтэй. Өөрөөр хэлбэл энэ толийг зүй ёсоор хэрэглэхийн тулд мөнгө төлөх шаардлагатай гэсэн үг.
+Stardict нь Linux, FreeBSD, Solaris, Win32 -бүгдэн дээр нь ажилладаг нээлттэй эх бүхий толь бичгийн програм юм. Мөн л нээлттэй эх бүхий төрөл бүрийн толь бичгүүдтэй. Гэхдээ толь бичгийн сан нь арай Babylon-д хүрэхгүй, тухайлбал монгол хэлтэй толь бичиг байхгүй байсан юм.</description>
+    </item>
+    
+  </channel>
+</rss>

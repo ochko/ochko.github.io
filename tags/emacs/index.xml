@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>emacs on Ochko</title><link>https://ochko.github.io/tags/emacs/</link><description>Recent content in emacs on Ochko</description><generator>Hugo -- gohugo.io</generator><language>mn</language><lastBuildDate>Mon, 19 Nov 2007 11:22:00 +0800</lastBuildDate><atom:link href="https://ochko.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml"/><item><title>Миний Emacs</title><link>https://ochko.github.io/tech/2007-11-emacs/</link><pubDate>Mon, 19 Nov 2007 11:22:00 +0800</pubDate><guid>https://ochko.github.io/tech/2007-11-emacs/</guid><description>Өмнө emacs ашиглаж сурч байгаа тухай дурдсан. Ойрын үед rails дээр ажиллаад байгаа болохоор emacs-аа rails дээр яаж тохируулснаа бичлээ.(Ерөнхий тохиолдолд бус, өөрийн компьютер дээр яаж суулгаснаараа)
+emacs22 суулгана.
+$ sudo apt-get install emacs22
+ruby-elisp суулгана.
+$ sudo apt-get install ruby-elisp
+emacs-rails багцийг суулгана.
+$ cd $HOME/.emacs.d/
+$ svn co svn://rubyforge.org/var/svn/emacs-rails/trunk emacs-rails
+snippet болон find-recursive багцуудыг мөн $HOME/.emacs.d дотор суулгана.
+$ wget http://www.</description></item></channel></rss>

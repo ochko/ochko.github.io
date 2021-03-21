@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Юникс shell-ийн командууд - Ochko&#39;s blog">
+<meta name="twitter:description" content="Юникс орчинд ороход шел дээр ажиллах нь зайлшгүй. Шел дээр ажиллах нь эхлээд залхуутай мэт санагдаж болох ч, энэ нь командууд болон багаж хэрэгслүүдийг хир зөв, үр дүнтэй ашиглаж байгаагаас хамаардаг. Үүний тулд хийж байгаа үйлдлээ хэрхэн илүү хялбар хурдан хийх вэ гэдгийг бодож, интернэтээс туршлага судлаж, шинэ хэрэгсэл, шинэ команд байнга сурч байх хэрэгтэй. Ингээд зарим хэрэг болохуйц командуудыг сийрүүлье.
+Ямар шел дээр ажиллаж байгааг харах
+\# echo $SHELL /bin/bash Командын гарын авлагыг унших">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Юникс shell-ийн командууд - Ochko&#39;s blog">
+<meta property="og:description" content="Юникс орчинд ороход шел дээр ажиллах нь зайлшгүй. Шел дээр ажиллах нь эхлээд залхуутай мэт санагдаж болох ч, энэ нь командууд болон багаж хэрэгслүүдийг хир зөв, үр дүнтэй ашиглаж байгаагаас хамаардаг. Үүний тулд хийж байгаа үйлдлээ хэрхэн илүү хялбар хурдан хийх вэ гэдгийг бодож, интернэтээс туршлага судлаж, шинэ хэрэгсэл, шинэ команд байнга сурч байх хэрэгтэй. Ингээд зарим хэрэг болохуйц командуудыг сийрүүлье.
+Ямар шел дээр ажиллаж байгааг харах
+\# echo $SHELL /bin/bash Командын гарын авлагыг унших">
+<meta property="og:url" content="http://blog.maahai.com/tech/2007-03-unix-shell-commands/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Юникс орчинд ороход шел дээр ажиллах нь зайлшгүй. Шел дээр ажиллах нь эхлээд залхуутай мэт санагдаж болох ч, энэ нь командууд болон багаж хэрэгслүүдийг хир зөв, үр дүнтэй ашиглаж байгаагаас хамаардаг. Үүний тулд хийж байгаа үйлдлээ хэрхэн илүү хялбар хурдан хийх вэ гэдгийг бодож, интернэтээс туршлага судлаж, шинэ хэрэгсэл, шинэ команд байнга сурч байх хэрэгтэй. Ингээд зарим хэрэг болохуйц командуудыг сийрүүлье.
+Ямар шел дээр ажиллаж байгааг харах
+\# echo $SHELL /bin/bash Командын гарын авлагыг унших">
+
+<title>Юникс shell-ийн командууд - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">Юникс shell-ийн командууд</div>
+  <time class="text-gray-500" datetime="2007-03-07 23:25:00 &#43;08">2007-03-07</time>
+<p>Юникс орчинд ороход шел дээр ажиллах нь зайлшгүй. Шел дээр ажиллах нь эхлээд залхуутай мэт санагдаж болох ч, энэ нь командууд болон багаж хэрэгслүүдийг хир зөв, үр дүнтэй ашиглаж байгаагаас хамаардаг. Үүний тулд хийж байгаа үйлдлээ хэрхэн илүү хялбар хурдан хийх вэ гэдгийг бодож, интернэтээс туршлага судлаж, шинэ хэрэгсэл, шинэ команд байнга сурч байх хэрэгтэй. Ингээд зарим хэрэг болохуйц командуудыг сийрүүлье.</p>
+<p>Ямар шел дээр ажиллаж байгааг харах</p>
+<pre><code>\# echo $SHELL  
+/bin/bash
+</code></pre><p>Командын гарын авлагыг унших</p>
+<pre><code>\# man ls
+</code></pre><p>Програм хаана байрлаж байгааг харах</p>
+<pre><code>\# whereis cp  
+cp: /bin/cp /usr/share/man/man1/cp.1.gz /usr/share/man/man1p/cp.1p.gz  
+
+</code></pre><p>Ажиллаж байгаа директори харах</p>
+<pre><code>\# pwd  
+/home/ochiro  
+
+</code></pre><p>Файлын төрлийг харах</p>
+<pre><code>\# file pauker.pau.gz  
+pauker.pau.gz: gzip compressed data, from MS-DOS
+</code></pre><p>Файлын эхний 5 мөрийг харах</p>
+<pre><code>\# head -n 5 ./tomcat/logs/localhost.2007-03-05.log  
+Mar 5, 2007 4:36:16 PM org.apache.catalina.core.ApplicationContext log  
+INFO: ContextListener: contextInitialized()  
+Mar 5, 2007 4:36:16 PM org.apache.catalina.core.ApplicationContext log  
+INFO: SessionListener: contextInitialized()  
+Mar 5, 2007 4:36:17 PM org.apache.catalina.core.ApplicationContext log
+</code></pre><p>Файлын сүүлийн 5 мөрийг харах</p>
+<pre><code>\# tail -n 5 ./tomcat/logs/manager.2007-03-05.log  
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'  
+Mar 5, 2007 5:15:48 PM org.apache.catalina.core.ApplicationContext log  
+INFO: HTMLManager: restart: Reloading web application at '/testapp'  
+Mar 5, 2007 5:15:48 PM org.apache.catalina.core.ApplicationContext log  
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+</code></pre><p>Лог файлын сүүлийн мөрүүдийг ажиглах</p>
+<pre><code>\# tail -f ./tomcat/logs/localhost.2007-03-05.log  
+at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)  
+at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)  
+at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)  
+at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)  
+at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)  
+
+</code></pre><p>Хоёр файлын ялгааг олох</p>
+<pre><code>\# diff dic.txt dic-new.txt  
+1a2  
+\&gt; new line  
+
+</code></pre><p>Удаан ажиллах командыг ард ажиллуулах</p>
+<pre><code>\# bin/backup-files.sh &amp;  
+\[1\] 26490  
+
+</code></pre><p>Ард ажиллаж байгаа командуудыг харах</p>
+<pre><code>\# jobs  
+\[1\]+  Stopped                 bin/backup-files.sh  
+
+</code></pre><p>Ажиллуулсан командуудынхаа түүхийг үзэх</p>
+<pre><code>\# history  
+1  echo $SHELL  
+2  whereis cp  
+3  pwd  
+4  file pauker.pau.gz  
+5  head -n 5 TUTORIAL~  
+6  cp dic.txt dic-new.txt  
+7  cat dic.txt  
+8  vi dic-new.txt  
+9  diff dic.txt dic-new.txt  
+....  
+
+</code></pre><p>Файл байхгүй бол үүсгэх</p>
+<pre><code>\# touch newfile.txt
+</code></pre><p>Дискний сул зайг харах</p>
+<pre><code>\# df -h  
+Filesystem            Size  Used Avail Use% Mounted on  
+/dev/hda2              13G  7.6G  4.5G  63% /  
+udev                  506M  152K  506M   1% /dev  
+/dev/hda3              51G   25G   26G  49% /home  
+/dev/hdb1              38G   25G  2.2G  92% /mnt/FAT32
+</code></pre><p>Директори доторхи файлуудыг хэмжээгээр нь буурах эрэмбээр жагсаах</p>
+<pre><code>\# du -sh archive/\* | sort -nrk 1  
+859M    archive/nihongo  
+303M    archive/photo  
+277M    archive/lessons  
+233M    archive/install  
+1.8G    archive/books
+</code></pre><p>Бичсэн скриптдээ ажиллах зөвшөөрөл тавих</p>
+<pre><code>\# chmod u+x scripts/upload.sh
+</code></pre><p>Тооны тооллыг хөрвүүлж харах</p>
+<pre><code>\# echo 'obase=10; ibase=16; E59' | bc  
+3673  
+
+</code></pre><p>Олон мөр оролт</p>
+<pre><code>\#  bc &lt;&lt;&gt; A  
+\&gt; EOF  
+10
+</code></pre><p>Директорын бүтцийг ганц командаар үүсгэх</p>
+<pre><code>\# mkdir -p project/{lib/ext,bin,src,doc/{html,txt,pdf},demo/stat/a}
+</code></pre><p>Директорийг архивлах</p>
+<pre><code>\# tar cvf /tmp/archive.tar archive
+</code></pre><p>Файлыг шахах</p>
+<pre><code>\# gzip archive.tar
+</code></pre><p>Архивийн файлыг сонгосон директори луу задлах</p>
+<pre><code>\# tar xvf -C dest/to/extract archive.tar.gz
+</code></pre><p>Эхний команд тэг утга буцаасан тохиолдолд дараагийн команд ажиллана</p>
+<pre><code>\# cd directory/exists &amp;&amp; tar xvf ~/archive.tar
+</code></pre><p>Эхний команд тэг биш утга буцаавал дараагийнх ажиллана</p>
+<pre><code>\# cd directory/not/exists || mkdir -p directory/not/exists
+</code></pre><p>Директори байхгүй бол үүсгээд архивийг задлана</p>
+<pre><code>\# cd dest/dir || mkdir -p dest/dir &amp;&amp; tar xvf -C dest/dir ~/archive.tar
+</code></pre><p>Урт командыг арагш ташуу зураасаар хуваах</p>
+<pre><code>\# cd dest/to/extract || \\  
+\&gt; mkdir -p est/to/extract &amp;&amp; \\  
+\&gt; tar xvf -C est/to/extract ~/archive.tar
+</code></pre><p>Зарим командуудыг дэд шелд ажиллуулаад гаралтыг admin руу мэйлдэх</p>
+<pre><code>\# ( cd dest/to/extract/ || mkdir -p dest/to/extract &amp;&amp; \\  
+\&gt; VAR=$PWD; cd ~; tar xvf -C $VAR archive.tar ) \\  
+\&gt; | mailx admin -S &quot;Archive contents&quot;
+</code></pre><p>Зарим командуудыг бүлэглэж ажиллуулаад гаралтыг admin руу мэйлдэх</p>
+<pre><code>\# { cp ${VAR}a . &amp;&amp; chown -R guest.guest a &amp;&amp; \\  
+\&gt; tar cvf newarchive.tar a; } | mailx admin -S &quot;New archive&quot;
+</code></pre><p>Эхний командаар гарч ирэх жагсаалтууд дээр өөр команд ажиллуулах</p>
+<pre><code>\# ls -1 | xargs file  
+bin:              directory  
+desk-books:       directory  
+Desktop:          directory  
+diagrams:         directory  
+dic-new.txt:      UTF-8 Unicode text  
+dic.txt:          UTF-8 Unicode text
+</code></pre><p>Файл дотроос текст хайх</p>
+<pre><code>\# grep implement TUTORIAL.txt  
+On systems which do not implement suspending, C-z creates a subshell  
+function which implements the C-p command.
+</code></pre><p>Файл дотроос хайхдаа regular expression ашиглах</p>
+<pre><code>\# grep ^The TUTORIAL.txt  
+The characters &quot;&gt;&gt;&quot; at the left margin indicate directions for you to  
+The first thing that you need to know is how to move around from place  
+The following commands are useful for viewing screenfuls:  
+There are several ways you can do this.  You can use the arrow keys,  
+The location of the cursor in the text is also called &quot;point&quot;.  To  
+There is a whole series of commands that start with CONTROL-x; many of  
+.......  
+
+</code></pre><p>wc хэрэглэлгүйгээр файл дотор хайсан текст хэдэн мөрөнд байгааг тоолох</p>
+<pre><code>\# grep -c ^The TUTORIAL.txt  
+30  
+
+</code></pre><p>awk ашиглаж багана сонгож харах</p>
+<pre><code>\# ls -l | awk '{print $3 &quot; &quot; $8 }'  
+  
+ochiro bin  
+ochiro desk-books  
+ochiro Desktop  
+ochiro diagrams  
+ochiro dic-new.txt  
+ochiro dic.txt  
+........  
+  
+
+</code></pre><p>Сонгосон баганаас хайх</p>
+<pre><code>\# ls --time-style=locale -l | awk '$6 == &quot;Mar&quot;'  
+drwxr-xr-x 11 ochiro users    3064 Mar  1 14:34 desk-books  
+drwxr-xr-x  2 ochiro users     784 Mar  2 09:53 Desktop  
+\-rw-r--r--  1 ochiro users      13 Mar  7 13:55 dic-new.txt  
+drwxr-xr-x  5 ochiro users    2664 Mar  6 10:43 downloads  
+drwxr-xr-x  2 ochiro users      48 Mar  5 13:55 ftpserver  
+drwxrwxrwx  7 ochiro users     400 Mar  5 18:03 wbt
+</code></pre><p>Файл дотроос текст хайж(cursor) солиод(pointer) шинэ файлд хадгалах</p>
+<pre><code>\# sed s/cursor/project\_name/g TUTORIAL.txt &gt; TUTORIAL\_new.txt
+</code></pre><p>Олон файлаас(*.txt) текст хайж(searchtext) солих(replacetext)</p>
+<pre><code>\# find ./ -name \*.txt -type f -exec sed -i 's/searchtext/replacetext/' {} \\;
+</code></pre><p>Хамгийн их хэрэглэсэн 10 командаа харах</p>
+<pre><code>\# history|awk '{print $2}'|awk 'BEGIN {FS=&quot;|&quot;} {print $1}' \\  
+\&gt; |sort|uniq -c|sort -nr|head -10  
+125 ls  
+32 su  
+32 cd  
+26 vi  
+25 sudo  
+23 cat  
+19 ping  
+19 netstat  
+19 exit  
+18 ps  
+
+</code></pre><p>Сүүлийн нэг цагийн дотор өөрчөгдсөн файлууд</p>
+<pre><code>\#  find ~ -mmin -60 \\! -type d  
+/home/ochiro/.thunderbird/Mail/Junk  
+/home/ochiro/.thunderbird/Mail/Sent  
+/home/ochiro/.thunderbird/Mail/Inbox.msf  
+/home/ochiro/.thunderbird/Mail/Drafts  
+/home/ochiro/.thunderbird/Mail/Inbox  
+/home/ochiro/.thunderbird/Mail/Junk.msf  
+/home/ochiro/.thunderbird/Mail/Sent.msf  
+/home/ochiro/.thunderbird/Mail/Drafts.msf  
+/home/ochiro/TUTORIAL\_new.txt  
+/home/ochiro/dic.txt
+</code></pre><p>Эх сурвалжууд:</p>
+<ul>
+<li><a href="http://www.ibm.com/developerworks/edu/au-dw-au-unixtips1-i.html">UNIX tips and tricks for a new user, Part 1: File maintenance tools</a></li>
+<li><a href="http://www.ibm.com/developerworks/edu/au-dw-au-unixtips3-i.html">UNIX tips and tricks for a new user, Part 3: Introducing filters and regular expressions</a></li>
+<li><a href="http://www.ibm.com/developerworks/edu/au-dw-au-unixtips4-i.html">UNIX tips and tricks for a new user, Part 4: Some nifty shell tricks</a></li>
+<li><a href="http://www.gnu.org/software/bash/manual/bashref.html">Bash Reference Manual</a></li>
+<li><a href="http://www-128.ibm.com/developerworks/aix/library/au-badunixhabits.html?ca=lnxw01GoodUnixHabits">UNIX tips: Learn 10 good UNIX usage habits</a></li>
+<li><a href="http://www-128.ibm.com/developerworks/aix/library/au-productivitytips.html">UNIX tips: Productivity tips</a></li>
+<li><a href="http://sparky.rice.edu/%7Ehartigan/awk.html">AWK</a></li>
+</ul>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

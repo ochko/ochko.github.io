@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NoSQL гэж юу вэ? - Ochko&#39;s blog">
+<meta name="twitter:description" content="Сүүлийн үед NoSQL өгөгдлийн сангууд нилээн эрчимжих хандлага харагдаж байна. Гэхдээ өгөгдлийн сангийн нийт хэрэглээний 1% хувийг ч эзлэх эсэх нь эргэлзээтэй л дээ. RDBMS нь өгөгдлийг хүснэгт зохион байгуулалттайгаар хадгалж, SQL хэл ашиглаад бичлэгүүдийг холбож ханддаг. Жишээ нь JOIN хийх, WHERE нөхцөл ашиглах гэх мэт. SQL хэл өгөгдлийг үнэхээр гарын дор болгож чаддаг боловч нэг асуудалтай - Scale хйих буюу өргөтгөхөд хэцүү байдаг. Нэг машин дээр байсан өгөгдлийн сангаа 2, 3 эсвэл 10 машин дээр ажиллуулах шаардлага гарвал яах бол?">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NoSQL гэж юу вэ? - Ochko&#39;s blog">
+<meta property="og:description" content="Сүүлийн үед NoSQL өгөгдлийн сангууд нилээн эрчимжих хандлага харагдаж байна. Гэхдээ өгөгдлийн сангийн нийт хэрэглээний 1% хувийг ч эзлэх эсэх нь эргэлзээтэй л дээ. RDBMS нь өгөгдлийг хүснэгт зохион байгуулалттайгаар хадгалж, SQL хэл ашиглаад бичлэгүүдийг холбож ханддаг. Жишээ нь JOIN хийх, WHERE нөхцөл ашиглах гэх мэт. SQL хэл өгөгдлийг үнэхээр гарын дор болгож чаддаг боловч нэг асуудалтай - Scale хйих буюу өргөтгөхөд хэцүү байдаг. Нэг машин дээр байсан өгөгдлийн сангаа 2, 3 эсвэл 10 машин дээр ажиллуулах шаардлага гарвал яах бол?">
+<meta property="og:url" content="http://blog.maahai.com/tech/2009-09-nosql/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Сүүлийн үед NoSQL өгөгдлийн сангууд нилээн эрчимжих хандлага харагдаж байна. Гэхдээ өгөгдлийн сангийн нийт хэрэглээний 1% хувийг ч эзлэх эсэх нь эргэлзээтэй л дээ. RDBMS нь өгөгдлийг хүснэгт зохион байгуулалттайгаар хадгалж, SQL хэл ашиглаад бичлэгүүдийг холбож ханддаг. Жишээ нь JOIN хийх, WHERE нөхцөл ашиглах гэх мэт. SQL хэл өгөгдлийг үнэхээр гарын дор болгож чаддаг боловч нэг асуудалтай - Scale хйих буюу өргөтгөхөд хэцүү байдаг. Нэг машин дээр байсан өгөгдлийн сангаа 2, 3 эсвэл 10 машин дээр ажиллуулах шаардлага гарвал яах бол?">
+
+<title>NoSQL гэж юу вэ? - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">NoSQL гэж юу вэ?</div>
+  <time class="text-gray-500" datetime="2009-09-15 22:09:00 &#43;08">2009-09-15</time>
+<p>Сүүлийн үед NoSQL өгөгдлийн сангууд нилээн эрчимжих хандлага харагдаж байна. Гэхдээ өгөгдлийн сангийн нийт хэрэглээний 1% хувийг ч эзлэх эсэх нь эргэлзээтэй л дээ. RDBMS нь өгөгдлийг хүснэгт зохион байгуулалттайгаар хадгалж, SQL хэл ашиглаад бичлэгүүдийг холбож ханддаг. Жишээ нь JOIN хийх, WHERE нөхцөл ашиглах гэх мэт. SQL хэл өгөгдлийг үнэхээр гарын дор болгож чаддаг боловч нэг асуудалтай - Scale хйих буюу өргөтгөхөд хэцүү байдаг. Нэг машин дээр байсан өгөгдлийн сангаа 2, 3 эсвэл 10 машин дээр ажиллуулах шаардлага гарвал яах бол? Ингэж ажиллуулах нь хэцүү. Ажиллуулж чадлаа гэхэд JOIN, WHERE гээд сүпер түлхүүр үгс маань удаан ажиллаж эхлэнэ.</p>
+<p>Харин SQL-гүй өгөгдлийн сангуудын хувьд энэ асуудал хялбар шийдэгддэг. Ихэнх нь анхнаасаа тархмал, өргөтгөхөд хялбар байхыг тооцож хийгдсэн учраас. Гэвч NoSQL өөрийн сул талтай. Жишээ нь, SQL-гүйгээр өгөгдлийн сан ашиглаад програм бичнэ гээд төсөөл дөө. Хачин санагдана, учир нь бид ямагт өгөгдлийг хүснэгт хэлбэрээр төсөөлөөд сурчихсанд байгаа юм. Ер нь ч ихэнх тохиолдолд мэдээлэл хүснэгт хэлбэрт байх нь ашиглахад амар байдгаас тэр. SQL-гүй програмыг зохиомжилно гэдэг системийг арай өөр өнцгөөс харахыг шаардана.</p>
+<p>Зарим мэдээлэл заавал хүснэгт хэлбэрт байгаад, SQL ашиглаад байх шаардлагагүй ч байдаг. Чухам ийм л үед тэдгээрийг ашиглах нь зөв. Эсвэл системээ NoSQL өнцгөөс хараад шинээр зохиомжилж болох.</p>
+<p>Эдгээрээс онцлогуудыг дурдвал:</p>
+<ul>
+<li>Tokyo Cabinet - Маш хурдтай, тархаж ажиллах чадвартай, өргөн боломж бүхий key-value store юм. Түлхүүрээр нь ямар нэг мэдээллийг хадгалж, хандах бөгөөд мэдээлэлт нь ямар ч төрлийн өгөгдөл байж болно. Hash, B-Tree, Table гэсэн гурван төлөвт ажиллаж чаддаг. BerkeleyDB-тэй өрсөлдөхүйц key-value store гэхээр олон жилийн хөдөлмөр шингэсэн байхаас аргагүй. Японы Facebook болох Mixi санхүүжүүлдэг гэхээр тогтвортой гэдэг нь харагдана.</li>
+<li>CouchDB - Бодит утгаараа concurrent байх боломжтой, учир нь Erlang дээр хийгдсэн. Мөн л key-value store боловч, value нь JSON төрөлтэй. REST интерфэйстэй учраас уян хатан. Бусдаасаа давуу тал нь нэг баазыг өөр тийш хуулах, хоёр баазыг синхрон хийхдээ маш гарамгай.</li>
+<li>Cassandra - Анх Facebook хөгжүүлж эхлээд нээлттэй эх болгосон гэхээр юуг хийхэд бэлэн, нас бие гүйцсэн гэдэг нь баталгаатай. Хэд хэдэн давхар холбоост массиваас тогтоно. Tokyo Cabinet -ийн адилаар зүгээр key-value store байхаас гадна хүснэгт маягаар бүтэцлэж хадгалдаг. Олон машин дээр тархааж ажиллуулахаар зохиогдсон.</li>
+<li>Redis - Tokyo Cabinet төстэй гэхдээ жагсаалт, олонлог гэсэн 2 төрлийн өгөгдлийн бүтцийг value тодроо хадгалах боломжтой. Ихэнх үйлдлийг санах ой дотор хийгээд диск руу байн байн хадгалдаг учраас маш хурдан, гэвч осолдож систем гэнэт зогсвол өгөгдөл алдагдах аюул бий. Тархсан байдлаар ажиллахад тийм сайн биш. Гэхдээ өгөгдлийн сан санах ойд багтах тохиолдолд эхний сонголт байж болох талтай.</li>
+</ul>
+<p>Дээрхи жагсаалт нөлөө бүхий баазуудыг бүгдийг багтааж чадаагүй. Миний сонирхож амжсан баазууд л энэ юм.</p>
+<p>Яг тохирох эсэхийг хэрэглэж байж л мэдэгддэг хойно, бодитоор хэрэглэж үзсэн хүн байвал сэтгэгдлээ хуваалцана гэдэгт найдаж байна.</p>
+<p>Эх сурвалж:</p>
+<ul>
+<li><a href="http://www.eflorenzano.com/blog/post/my-thoughts-nosql/">http://www.eflorenzano.com/blog/post/my-thoughts-nosql/</a></li>
+<li><a href="http://blog.oskarsson.nu/2009/06/nosql-debrief.html">http://blog.oskarsson.nu/2009/06/nosql-debrief.html</a></li>
+<li><a href="http://www.igvita.com/2009/02/13/tokyo-cabinet-beyond-key-value-store/">http://www.igvita.com/2009/02/13/tokyo-cabinet-beyond-key-value-store/</a></li>
+<li><a href="http://www.engineyard.com/blog/2009/key-value-stores-in-ruby/">http://www.engineyard.com/blog/2009/key-value-stores-in-ruby/</a></li>
+<li><a href="http://www.engineyard.com/blog/2009/key-value-stores-for-ruby-part-2-tokyo-cabinet/">http://www.engineyard.com/blog/2009/key-value-stores-for-ruby-part-2-tokyo-cabinet/</a></li>
+<li><a href="http://www.engineyard.com/blog/2009/cassandra-and-ruby-a-love-affair/">http://www.engineyard.com/blog/2009/cassandra-and-ruby-a-love-affair/</a></li>
+<li><a href="http://www.engineyard.com/blog/2009/key-value-stores-for-ruby-part-4-to-redis-or-not-to-redis/">http://www.engineyard.com/blog/2009/key-value-stores-for-ruby-part-4-to-redis-or-not-to-redis/</a></li>
+<li><a href="http://code.google.com/p/redis/">http://code.google.com/p/redis/</a></li>
+<li><a href="http://couchdb.apache.org/">http://couchdb.apache.org/</a></li>
+</ul>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

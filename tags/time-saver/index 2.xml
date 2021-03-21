@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>time saver on Ochko&#39;s blog</title>
+    <link>http://blog.maahai.com/tags/time-saver/</link>
+    <description>Recent content in time saver on Ochko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Thu, 13 Aug 2009 19:17:00 +0800</lastBuildDate><atom:link href="http://blog.maahai.com/tags/time-saver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ruby use case : Downloading Монголын Нууц Товчоо</title>
+      <link>http://blog.maahai.com/tech/2009-08-ruby-use-case-downloading/</link>
+      <pubDate>Thu, 13 Aug 2009 19:17:00 +0800</pubDate>
+      
+      <guid>http://blog.maahai.com/tech/2009-08-ruby-use-case-downloading/</guid>
+      <description>Сая нэтээр явж байгаад Монголын Нууц Товчооны audiobook олов. Татаж авах линк байхгүй болохоор нь веб хуудасны соорсыг харвал config.xml дотор mp3 файлуудын зам байж байна. Гараар татахаас залхуураад рүби дээр нэг өгүүлбэр бичив.
+Тайлбар:
+  1-3 мөр. шаардлагатай сангууд
+  5-р мөр. base_url -д байгаа url дээр mp3 тоглуулагч байгаа. mp3 файлуудын замыг агуулж буй config.xml мөн энэ url дотор бий.
+  7-р мөр. open-uri сангийн open методыг ашиглаж config.</description>
+    </item>
+    
+  </channel>
+</rss>

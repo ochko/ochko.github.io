@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code generation on Ochko&#39;s blog</title>
+    <link>http://blog.maahai.com/tags/code-generation/</link>
+    <description>Recent content in code generation on Ochko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Thu, 11 Jan 2007 23:02:00 +0800</lastBuildDate><atom:link href="http://blog.maahai.com/tags/code-generation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Залхуурсан шиг залхуур</title>
+      <link>http://blog.maahai.com/tech/2007-01-lazy/</link>
+      <pubDate>Thu, 11 Jan 2007 23:02:00 +0800</pubDate>
+      
+      <guid>http://blog.maahai.com/tech/2007-01-lazy/</guid>
+      <description>Бага залхуугаас Их залхуу.
+Ардын зүйр үг
+Програмчиний ажил нь өдөр болгон дахин давтагдахгүй өөр юм хийж байдагт би дуртай. Давтагдах зүйл гарлаа гэхэд функц болгож бичээд хэрэглэнэ, багц модуль болгож салгаад өөр програмд ашиглана. Иймд нэг хийсэн зүйлээ давтаж хийх ёсгүй.
+Гэхдээ яг адилхан биш боловч төсөөтэй зүйл давтагдах үед Copy&amp;amp;Paste хийгээд жаахан өөрчлөөд болгочих тохиолдол элбэг. Тухайлбал вэб апликэшн хөгжүүлэх үед төсөөтэй үйлдлүүд нилээн тааралддаг. Өгөгдлийн сан руу хэрэглэгч бүртгэх үйлдэл хийчихсэн байлаа гэж саная.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ruby use case : Downloading Монголын Нууц Товчоо - Ochko&#39;s blog">
+<meta name="twitter:description" content="Сая нэтээр явж байгаад Монголын Нууц Товчооны audiobook олов. Татаж авах линк байхгүй болохоор нь веб хуудасны соорсыг харвал config.xml дотор mp3 файлуудын зам байж байна. Гараар татахаас залхуураад рүби дээр нэг өгүүлбэр бичив.
+Тайлбар:
+  1-3 мөр. шаардлагатай сангууд
+  5-р мөр. base_url -д байгаа url дээр mp3 тоглуулагч байгаа. mp3 файлуудын замыг агуулж буй config.xml мөн энэ url дотор бий.
+  7-р мөр. open-uri сангийн open методыг ашиглаж config.">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ruby use case : Downloading Монголын Нууц Товчоо - Ochko&#39;s blog">
+<meta property="og:description" content="Сая нэтээр явж байгаад Монголын Нууц Товчооны audiobook олов. Татаж авах линк байхгүй болохоор нь веб хуудасны соорсыг харвал config.xml дотор mp3 файлуудын зам байж байна. Гараар татахаас залхуураад рүби дээр нэг өгүүлбэр бичив.
+Тайлбар:
+  1-3 мөр. шаардлагатай сангууд
+  5-р мөр. base_url -д байгаа url дээр mp3 тоглуулагч байгаа. mp3 файлуудын замыг агуулж буй config.xml мөн энэ url дотор бий.
+  7-р мөр. open-uri сангийн open методыг ашиглаж config.">
+<meta property="og:url" content="http://blog.maahai.com/tech/2009-08-ruby-use-case-downloading/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Сая нэтээр явж байгаад Монголын Нууц Товчооны audiobook олов. Татаж авах линк байхгүй болохоор нь веб хуудасны соорсыг харвал config.xml дотор mp3 файлуудын зам байж байна. Гараар татахаас залхуураад рүби дээр нэг өгүүлбэр бичив.
+Тайлбар:
+  1-3 мөр. шаардлагатай сангууд
+  5-р мөр. base_url -д байгаа url дээр mp3 тоглуулагч байгаа. mp3 файлуудын замыг агуулж буй config.xml мөн энэ url дотор бий.
+  7-р мөр. open-uri сангийн open методыг ашиглаж config.">
+
+<title>Ruby use case : Downloading Монголын Нууц Товчоо - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">Ruby use case : Downloading Монголын Нууц Товчоо</div>
+  <time class="text-gray-500" datetime="2009-08-13 19:17:00 &#43;08">2009-08-13</time>
+<p>Сая нэтээр явж байгаад <a href="http://bit.ly/listen-nuuts-tovchoo">Монголын Нууц Товчооны audiobook</a> олов. Татаж авах линк байхгүй болохоор нь веб хуудасны соорсыг харвал config.xml дотор mp3 файлуудын зам байж байна. Гараар татахаас залхуураад рүби дээр нэг <a href="http://pastie.org/582495">өгүүлбэр бичив</a>.</p>
+<p>Тайлбар:</p>
+<ul>
+<li>
+<p>1-3 мөр. шаардлагатай сангууд</p>
+</li>
+<li>
+<p>5-р мөр. base_url -д байгаа url дээр mp3 тоглуулагч байгаа. mp3 файлуудын замыг агуулж буй config.xml мөн энэ url дотор бий.</p>
+</li>
+<li>
+<p>7-р мөр. open-uri сангийн open методыг ашиглаж config.xml-ийн агуулгыг аваад, түүнийгээ hpricot сангийн search методоор хайж item гэсэн таагуудыг ялгаж авч байгаа.</p>
+</li>
+<li>
+<p>8-р мөр. item таагийн агуулгыг inner_html методоор уншаад, түүнийгээ &lsquo;;&rsquo; тэмдэгтээр split хийж эхний хэсгийг mp3path-д авч байна (item тааг доторхи агуулга нь &lsquo;;&rsquo; тэмдэгтээр таслагдсан 2 хэсэгтэй ба эхний хэсэг нь mp3 файлын зам байсан.)</p>
+</li>
+<li>
+<p>9-р мөр. юниксийн wget командыг ажиллуулж файлыг татахдаа үр дүнг хэвлэнэ. (`` -ийм хашилтад хийсэн тэмдэгт мөрийг рүби үйлдлийн системийн команд байна гэж ойлгодог. тэмдэгт мөр дотор #{expression} гэсэн зүйл байвал рүби тэр доторхийг validate хийгээд үр дүнг тэмдэгт мөр дотор оруулдаг.)</p>
+</li>
+</ul>
+<p>Unix систем дээр байгаа бол дээрх кодыг downloader.rb файлд хадгалаад,<br>
+#ruby downloader.rb<br>
+гэж ажилуулахад Монголын Нууц товчооны mp3 файлуудтай болно. Хэрэв ямар нэг юм олдохгүй байна гэсэн алдаа гарвал<br>
+#gem install open-uri hpricot<br>
+гэж ашигласан сангуудыг суулгана. Өөр алдаа гарвал хэлээрэй.</p>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

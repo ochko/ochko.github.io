@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Интэрфэйс дизайн - Ochko&#39;s blog">
+<meta name="twitter:description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм.">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Интэрфэйс дизайн - Ochko&#39;s blog">
+<meta property="og:description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм.">
+<meta property="og:url" content="http://blog.maahai.com/tech/2007-01-interface-design/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм.">
+
+<title>Интэрфэйс дизайн - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">Интэрфэйс дизайн</div>
+  <time class="text-gray-500" datetime="2007-01-04 01:52:00 &#43;08">2007-01-04</time>
+<p>Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм. Гаднаас интэрфэйсийг ашиглагч талд дотоод үйлдлүүд болон дотоод бүтэц хамаагүй боловч дотоод мөн чанаруудаа орхигдуулалгүй илэрхийлж чадахуйц байх нь бас чухал.</p>
+<p>Хэрэглэгчийн график интэрфэйсийн хувьд аль болох <a href="http://www.joelonsoftware.com/items/2006/12/09.html">энгийн байлгах</a> хэрэгтэй гэжээ. Гэвч энгийн байлгах гээд цөөхөн функцтэй ядуу програм байж болохгүй. Энгийн мөртлөө олон функцтэй, хэрэглэхэд эвтэйхэн байлгахын тулд програмаа функцүүдийн цуглуулга биш, цогц үйлүүдийн урсгал байхаар загварчлах хэрэгтэй. Үнэхээр сайн дизайн хийж чадвал хэрэглэгч хүссэн зүйлээ бодож хайлгүйгээр шууд зөнгөөрөө л хийчихнэ гэсэн үг. Хэрэглэгчийг олон сонголтуудаас сонгуулж <a href="http://www.managementconsultingnews.com/interviews/krug_interview.php">бодуулах нь сайн шийдэл биш</a> гэнэ. Нэг удаагийн хулганы товшилт, хэрэглэгчийн нэг удаагийн нүдний хөдөлгөөн ч үнэтэй бөгөөд эдгээрийг тооцож чадвал хүн бүхэн вэбийг чинь хэрэглэх дуртай байх болно.</p>
+<p>Хэрэглэгчийн интэрфэйстай холбоотэй вэб холбоосууд:</p>
+<ul>
+<li>
+<p><a href="http://www.killersites.com/articles/articles_dosAndDontsWebDesign.htm">The Do’s and Don’ts of Web Site Design.</a> Вэб дизайн хийхэд юуг хйих, юунаас зайлсхийх хэрэгтэйг заасан байна.</p>
+</li>
+<li>
+<p><a href="http://www.joelonsoftware.com/items/2006/12/09.html">Simplicity</a>. Энгийн байлгана гэдэг дизайныг сайжруулж байгаа боловч дутуу функцтэй байна гэдэг муу дизайнтай байхаас ч дор.</p>
+</li>
+<li>
+<p><a href="http://www.ratz.com/features.html">Web Design Features</a>. Сайн дизайнтай вэб ямар шинж чанаруудтай байдаг, муу дизайнтай вэб ямар шинжтэй байдгийг тоочсон байна.</p>
+</li>
+<li>
+<p><a href="http://www.netmechanic.com/news/vol7/design_no4.htm">Web Site Usability Checklist</a>. Хэрэглэхэд хялбар вэб ямар нөхцөлүүдийг хангаж байх ёстойг шалгах шинжүүрүүдийн жагсаалт.</p>
+</li>
+<li>
+<p><a href="http://psychology.wichita.edu/optimalweb/">Criteria for optimal web design</a>. Зураг хэрхэн ашиглах, хөгшид хүүхдүүдэд хэрэглэхэд хялбар байлгах, интернэйшнл байлгах гэх зэрэг зөндөө зүйлс байна.</p>
+</li>
+<li>
+<p><a href="http://www.joelonsoftware.com/uibook/fog0000000249.html">User Interface Design for Programmers</a>. Яаж төсөөлсөн түүгээр нь ажиллах дизайныг үзүүлж чадвал хэрглэгчдийн сэтгэл ханах болно.</p>
+</li>
+</ul>
+<p>Санал болгох ном:</p>
+<ul>
+<li><a href="http://www.ahfx.net/weblog.php?article=78">Don&rsquo;t Make Me Think: A Common Sense Approach to Web Usability</a></li>
+<li><a href="http://www.amazon.com/Designing-Interfaces-Jenifer-Tidwell/dp/0596008031/ref=pd_sim_dbs_v_5/102-0154307-2965770">Designing Interfaces</a></li>
+</ul>
+<p><a href="http://www.ahfx.net/weblog.php?article=78"><br>
+</a></p>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

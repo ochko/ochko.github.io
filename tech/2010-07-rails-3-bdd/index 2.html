@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rails 3, Cucumber, Machinist, Authlogic Gotchas - Ochko&#39;s blog">
+<meta name="twitter:description" content="bundle install
+rails g rspec:install
+rails g machinist:install
+1. Specify rspec versions in Gemfile If you get &amp;ldquo;no such file to load &amp;ndash; action_controller/test_process&amp;rdquo; error:
+gem &amp;lsquo;rspec&amp;rsquo;, &amp;ldquo;&amp;gt;=2.0.0.beta.5&amp;rdquo;, :group =&amp;gt; :test
+group :test do
+&amp;hellip;
+gem &amp;lsquo;rspec-rails&amp;rsquo;,&amp;quot;&amp;gt;=2.0.0.beta.5&amp;quot;
+&amp;hellip;
+end
+2. Bundle Authlogic from git If you get &amp;ldquo;undefined method `before_persisting&#39; for Authlogic&amp;rdquo; error:
+gem &amp;lsquo;authlogic&amp;rsquo;, :git =&amp;gt; &amp;lsquo;http://github.com/binarylogic/authlogic.git&#39;
+Emacs tips
+Feature mode: http://github.com/michaelklishin/cucumber.el
+Org mode: http://orgmode.org/guide/Tables.html#Tables">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rails 3, Cucumber, Machinist, Authlogic Gotchas - Ochko&#39;s blog">
+<meta property="og:description" content="bundle install
+rails g rspec:install
+rails g machinist:install
+1. Specify rspec versions in Gemfile If you get &amp;ldquo;no such file to load &amp;ndash; action_controller/test_process&amp;rdquo; error:
+gem &amp;lsquo;rspec&amp;rsquo;, &amp;ldquo;&amp;gt;=2.0.0.beta.5&amp;rdquo;, :group =&amp;gt; :test
+group :test do
+&amp;hellip;
+gem &amp;lsquo;rspec-rails&amp;rsquo;,&amp;quot;&amp;gt;=2.0.0.beta.5&amp;quot;
+&amp;hellip;
+end
+2. Bundle Authlogic from git If you get &amp;ldquo;undefined method `before_persisting&#39; for Authlogic&amp;rdquo; error:
+gem &amp;lsquo;authlogic&amp;rsquo;, :git =&amp;gt; &amp;lsquo;http://github.com/binarylogic/authlogic.git&#39;
+Emacs tips
+Feature mode: http://github.com/michaelklishin/cucumber.el
+Org mode: http://orgmode.org/guide/Tables.html#Tables">
+<meta property="og:url" content="http://blog.maahai.com/tech/2010-07-rails-3-bdd/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="bundle install
+rails g rspec:install
+rails g machinist:install
+1. Specify rspec versions in Gemfile If you get &amp;ldquo;no such file to load &amp;ndash; action_controller/test_process&amp;rdquo; error:
+gem &amp;lsquo;rspec&amp;rsquo;, &amp;ldquo;&amp;gt;=2.0.0.beta.5&amp;rdquo;, :group =&amp;gt; :test
+group :test do
+&amp;hellip;
+gem &amp;lsquo;rspec-rails&amp;rsquo;,&amp;quot;&amp;gt;=2.0.0.beta.5&amp;quot;
+&amp;hellip;
+end
+2. Bundle Authlogic from git If you get &amp;ldquo;undefined method `before_persisting&#39; for Authlogic&amp;rdquo; error:
+gem &amp;lsquo;authlogic&amp;rsquo;, :git =&amp;gt; &amp;lsquo;http://github.com/binarylogic/authlogic.git&#39;
+Emacs tips
+Feature mode: http://github.com/michaelklishin/cucumber.el
+Org mode: http://orgmode.org/guide/Tables.html#Tables">
+
+<title>Rails 3, Cucumber, Machinist, Authlogic Gotchas - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">Rails 3, Cucumber, Machinist, Authlogic Gotchas</div>
+  <time class="text-gray-500" datetime="2010-07-27 20:12:00 &#43;08">2010-07-27</time>
+<p>bundle install</p>
+<p>rails g rspec:install</p>
+<p>rails g machinist:install</p>
+<p>1. Specify rspec versions in Gemfile If you get &ldquo;no such file to load &ndash; action_controller/test_process&rdquo; error:</p>
+<p><strong>gem &lsquo;rspec&rsquo;, &ldquo;&gt;=2.0.0.beta.5&rdquo;, :group =&gt; :test</strong></p>
+<p><strong>group :test do</strong></p>
+<p><strong>&hellip;</strong></p>
+<p><strong>gem &lsquo;rspec-rails&rsquo;,&quot;&gt;=2.0.0.beta.5&quot;</strong></p>
+<p><strong>&hellip;</strong></p>
+<p><strong>end</strong></p>
+<p>2. Bundle Authlogic from git If you get &ldquo;undefined method `before_persisting' for Authlogic&rdquo; error:</p>
+<p><strong>gem &lsquo;authlogic&rsquo;, :git =&gt; &lsquo;<a href="http://github.com/binarylogic/authlogic.git'">http://github.com/binarylogic/authlogic.git'</a></strong></p>
+<p>Emacs tips</p>
+<p>Feature mode: <a href="http://github.com/michaelklishin/cucumber.el">http://github.com/michaelklishin/cucumber.el</a></p>
+<p>Org mode: <a href="http://orgmode.org/guide/Tables.html#Tables">http://orgmode.org/guide/Tables.html#Tables</a></p>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

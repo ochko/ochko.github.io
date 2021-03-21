@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BDD on Rails: Cucumber, Webrat &amp; Factory girl - Ochko&#39;s blog">
+<meta name="twitter:description" content="Сүүлийн үед BDD(Behavior Driven Development) их таалагдаж байна аа. Урьд нь TDD(Test Driven Development)-ийг хэрэглэх гээд нэг л болж өгдөггүй байлаа. TDD бол урьдаар тестээ зохиочихоод кодоо бичдэг. Тест бичихийн тулд систем яаж ажиллах ёстойг дотроо ч юмуу, өөр нэг газар хийсэн/бичсэн байх болдог. Ингэхээр тест бичихийн өмнө баахан дизайн хийх/бодох шаардлага гарчихаад байдаг л даа. Харин BDD болохоор систем гаднаасаа хэрэглэгчид яаж харагдах, яаж аашлаж авирлахыг(behave) эхлэж бичээд, түүн дээрээ үндэслээд л TDD хийгээд улаан ногоон гэрэл анивчуулаад явчихна гэсэн үг.">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BDD on Rails: Cucumber, Webrat &amp; Factory girl - Ochko&#39;s blog">
+<meta property="og:description" content="Сүүлийн үед BDD(Behavior Driven Development) их таалагдаж байна аа. Урьд нь TDD(Test Driven Development)-ийг хэрэглэх гээд нэг л болж өгдөггүй байлаа. TDD бол урьдаар тестээ зохиочихоод кодоо бичдэг. Тест бичихийн тулд систем яаж ажиллах ёстойг дотроо ч юмуу, өөр нэг газар хийсэн/бичсэн байх болдог. Ингэхээр тест бичихийн өмнө баахан дизайн хийх/бодох шаардлага гарчихаад байдаг л даа. Харин BDD болохоор систем гаднаасаа хэрэглэгчид яаж харагдах, яаж аашлаж авирлахыг(behave) эхлэж бичээд, түүн дээрээ үндэслээд л TDD хийгээд улаан ногоон гэрэл анивчуулаад явчихна гэсэн үг.">
+<meta property="og:url" content="http://blog.maahai.com/tech/2009-05-bdd/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Сүүлийн үед BDD(Behavior Driven Development) их таалагдаж байна аа. Урьд нь TDD(Test Driven Development)-ийг хэрэглэх гээд нэг л болж өгдөггүй байлаа. TDD бол урьдаар тестээ зохиочихоод кодоо бичдэг. Тест бичихийн тулд систем яаж ажиллах ёстойг дотроо ч юмуу, өөр нэг газар хийсэн/бичсэн байх болдог. Ингэхээр тест бичихийн өмнө баахан дизайн хийх/бодох шаардлага гарчихаад байдаг л даа. Харин BDD болохоор систем гаднаасаа хэрэглэгчид яаж харагдах, яаж аашлаж авирлахыг(behave) эхлэж бичээд, түүн дээрээ үндэслээд л TDD хийгээд улаан ногоон гэрэл анивчуулаад явчихна гэсэн үг.">
+
+<title>BDD on Rails: Cucumber, Webrat &amp; Factory girl - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">BDD on Rails: Cucumber, Webrat &amp; Factory girl</div>
+  <time class="text-gray-500" datetime="2009-05-07 11:37:00 &#43;08">2009-05-07</time>
+<p>Сүүлийн үед BDD(Behavior Driven Development) их таалагдаж байна аа. Урьд нь TDD(Test Driven Development)-ийг хэрэглэх гээд нэг л болж өгдөггүй байлаа. TDD бол урьдаар тестээ зохиочихоод кодоо бичдэг. Тест бичихийн тулд систем яаж ажиллах ёстойг дотроо ч юмуу, өөр нэг газар хийсэн/бичсэн байх болдог. Ингэхээр тест бичихийн өмнө баахан дизайн хийх/бодох шаардлага гарчихаад байдаг л даа. Харин BDD болохоор систем гаднаасаа хэрэглэгчид яаж харагдах, яаж аашлаж авирлахыг(behave) эхлэж бичээд, түүн дээрээ үндэслээд л TDD хийгээд улаан ногоон гэрэл анивчуулаад явчихна гэсэн үг. Иймд BDD нь TDD-р гол ажлаа амжуулж байгаа юм. Гэхдээ захиалагчид ч, хөгжүүлэгчид ч амар байдлаар.</p>
+<p>Rails дээр <a href="http://cukes.info/">Cucumber</a>, <a href="http://wiki.github.com/brynary/webrat">Webrat</a>, <a href="http://github.com/thoughtbot/factory_girl/tree/master">Factory girl</a> -эднүүсийг ашиглаад үнэхээр баяр баясгалантайгаар BDD хийж болж байна. Cucumber бол энгийн өгүүлбэрээр биччихсэн feature/behavior-ийг тестийн код болгодог гайхамшигт туслах. Webrat нь вэб тестийг browser хэрэглэлгүй хийчдэг. Тест хийхэд өгөгдөл хэрэгтэй, тэгвэл Factory girl чамд туслана.</p>
+<p>Мянга сонсохоор нэг үз гэдэг, цаашихийг эдгээр screencast-ууд болон presentation-ээс үзээрэй. Happy Coding!</p>
+<p>Railscast screencast-ууд:</p>
+<ul>
+<li><a href="http://railscasts.com/episodes/155-beginning-with-cucumber">Episode 155: Beginning with Cucumber</a></li>
+<li><a href="http://railscasts.com/episodes/156-webrat">Episode 156: Webrat</a></li>
+<li><a href="http://railscasts.com/episodes/158-factories-not-fixtures">Episode 158: Factories not Fixtures</a></li>
+</ul>
+<p>Бусад линкүүд:</p>
+<ul>
+<li><a href="http://cukes.info/">Cucumber</a></li>
+<li><a href="http://mwrc2009.confreaks.com/14-mar-2009-15-00-bdd-with-cucumber-ben-mabey.html">Cucumber Presentation</a></li>
+<li><a href="http://wiki.github.com/brynary/webrat">Webrat</a></li>
+<li><a href="http://github.com/thoughtbot/factory_girl/tree/master">Factory girl</a></li>
+</ul>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>

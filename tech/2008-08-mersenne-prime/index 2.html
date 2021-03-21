@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="mn"><meta charset="utf-8">
+<meta name="generator" content="Hugo 0.81.0" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2^32,582,657-1 - Ochko&#39;s blog">
+<meta name="twitter:description" content="Математикт 2 -ийн зэрэгтээс нэгээр бага тоонуудыг Мерсенний тоо гэдэг. Энэ тоо бол одоогоор мэдэгдэж байгаа хамгийн их анхны тоо юм. Мерсений тоог анхных эсэхийг шалгадаг Lucas–Lehmer -ийн тест нь бусад ижил төрлийн тестүүдээс илүү хурдтай учраас одоогоор мэдэгдээд байгаа хамгийн том анхны тоонууд дандаа мерсенний тоонууд байдаг байна. Энэ долоо хоногт 45 дахь мерсенний анхны тоо олдсон байж магадгүй бөгөөд яг баттай хариу нь 2 долоо хоногийн дараа дахин шалгасны эцэст гарах нь байна.">
+<meta name="twitter:site" content="http://blog.maahai.com/">
+<meta name="twitter:creator" content="L.Ochirkhuyag">
+<meta name="twitter:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2^32,582,657-1 - Ochko&#39;s blog">
+<meta property="og:description" content="Математикт 2 -ийн зэрэгтээс нэгээр бага тоонуудыг Мерсенний тоо гэдэг. Энэ тоо бол одоогоор мэдэгдэж байгаа хамгийн их анхны тоо юм. Мерсений тоог анхных эсэхийг шалгадаг Lucas–Lehmer -ийн тест нь бусад ижил төрлийн тестүүдээс илүү хурдтай учраас одоогоор мэдэгдээд байгаа хамгийн том анхны тоонууд дандаа мерсенний тоонууд байдаг байна. Энэ долоо хоногт 45 дахь мерсенний анхны тоо олдсон байж магадгүй бөгөөд яг баттай хариу нь 2 долоо хоногийн дараа дахин шалгасны эцэст гарах нь байна.">
+<meta property="og:url" content="http://blog.maahai.com/tech/2008-08-mersenne-prime/">
+<meta property="og:site_name" content="Ochko&#39;s blog">
+<meta property="og:image" content="http://blog.maahai.com/images/avatar.jpg">
+
+<meta name="author" content="L.Ochirkhuyag">
+<meta name="description" content="Математикт 2 -ийн зэрэгтээс нэгээр бага тоонуудыг Мерсенний тоо гэдэг. Энэ тоо бол одоогоор мэдэгдэж байгаа хамгийн их анхны тоо юм. Мерсений тоог анхных эсэхийг шалгадаг Lucas–Lehmer -ийн тест нь бусад ижил төрлийн тестүүдээс илүү хурдтай учраас одоогоор мэдэгдээд байгаа хамгийн том анхны тоонууд дандаа мерсенний тоонууд байдаг байна. Энэ долоо хоногт 45 дахь мерсенний анхны тоо олдсон байж магадгүй бөгөөд яг баттай хариу нь 2 долоо хоногийн дараа дахин шалгасны эцэст гарах нь байна.">
+
+<title>2^32,582,657-1 - Ochko&#39;s blog</title>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://blog.maahai.com/main.9facde066d35c5fb0565c92181bbbb86b525e039615832148c0b790ae5be871b.css">
+<body class="antialiased">
+      <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8"><div class="mb-8">
+  <nav class="flex space-x-4" aria-label="Tabs">
+    <img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="http://blog.maahai.com/images/avatar.jpg" alt="L.Ochirkhuyag">
+
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      Blog
+    </a>
+     <a href="#" class="bg-gray-100 text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md" aria-current="page">
+    
+      Tech
+    </a>
+    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">
+      About
+    </a>
+  </nav>
+</div>
+<div id="content">
+<article class="prose max-w-none">
+  <div class="text-3xl font-serif">2^32,582,657-1</div>
+  <time class="text-gray-500" datetime="2008-08-28 22:39:00 &#43;08">2008-08-28</time>
+<p>Математикт 2 -ийн зэрэгтээс нэгээр бага тоонуудыг <a href="http://en.wikipedia.org/wiki/Mersenne_prime">Мерсенний тоо</a> гэдэг. Энэ тоо бол одоогоор мэдэгдэж байгаа хамгийн их анхны тоо юм. Мерсений тоог анхных эсэхийг шалгадаг <a href="http://www.blogger.com/Lucas%C3%A2%C2%80%C2%93Lehmer%20test%20for%20Mersenne%20numbers">Lucas–Lehmer -ийн тест</a> нь бусад ижил төрлийн тестүүдээс илүү хурдтай учраас одоогоор мэдэгдээд байгаа хамгийн том анхны тоонууд дандаа мерсенний тоонууд байдаг байна. Энэ долоо хоногт <a href="http://mersenne.org/prime.htm">45 дахь мерсенний анхны тоо</a> олдсон байж магадгүй бөгөөд яг баттай хариу нь 2 долоо хоногийн дараа дахин шалгасны эцэст гарах нь байна. Гарчиг дээр бичэн одоогоор мэдэгдэж буй хамгийн том анхны тоо нь 9.8 сая оронтой ба <a href="http://www.eff.org/awards/coop">EFF -ээс зарласан $50,000 -ийн шагналыг</a> хожсон ажээ. 2 долоо хоногийн дараа 45 дахь мерсений тоо $100,000 хожих эсэх нь тодорхой болно. Хэрэв та ямар нэг аргаар нэг саяаас их оронтой анхны тоог олж чадвал $250,000 -ийн шагналы эзэн болох боломжтой.</p>
+
+<article>
+
+        </div><footer class="mt-20 text-sm">&copy; 2006-2021 L.Ochirkhuyag</footer>
+</div>
+    </body>
+</html>
