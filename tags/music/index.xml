@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>music on Ochko</title><link>https://ochko.github.io/tags/music/</link><description>Recent content in music on Ochko</description><generator>Hugo -- gohugo.io</generator><language>mn</language><lastBuildDate>Sat, 27 Jan 2007 08:30:00 -0800</lastBuildDate><atom:link href="https://ochko.github.io/tags/music/index.xml" rel="self" type="application/rss+xml"/><item><title>Бүүвэй бүүвэй</title><link>https://ochko.github.io/posts/2007-01-lullaby/</link><pubDate>Sat, 27 Jan 2007 08:30:00 -0800</pubDate><guid>https://ochko.github.io/posts/2007-01-lullaby/</guid><description>Миний анхны сонссон дуу, магадгүй бүүвэйн дуу. Одоо яг санахгүй ч гэлээ.
-Цэцэрлэгт яваагүй зожиг хүүхэд байсан болохоор маамуу наашир лав анхны дуулсан дуу биш. Бага байхад раажав зурагтаар явдаг дуунуудыг л сонсдог байв. Бас хааяа өвөө эмээгийнхээ дуулахыг сонсоно. Өвөө маань баян хуураа орныхоо хөндийгөөс гаргаж ирээд дарж эхлэхэд эмээ маань аяндаа аман дотроо аялаад эхэлдэгсэн.
-Сургуульд ороод дуу хөгжмийн хичээл дээр заасан хэдэн дуу, тэгээд дээр нь энд тэндээс сонссон бас бусхан аялгуу, дууны тасархайгаар хөгжмийн боловсрол минь хязгаарлагдаж байлаа.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music on Ochko</title>
+    <link>https://ochko.github.io/tags/music/</link>
+    <description>Recent content in music on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Sat, 27 Jan 2007 08:30:00 -0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Бүүвэй бүүвэй</title>
+      <link>https://ochko.github.io/posts/2007-01-lullaby/</link>
+      <pubDate>Sat, 27 Jan 2007 08:30:00 -0800</pubDate>
+      <guid>https://ochko.github.io/posts/2007-01-lullaby/</guid>
+      <description>Миний анхны сонссон дуу, магадгүй бүүвэйн дуу. Одоо яг санахгүй ч гэлээ.&#xA;Цэцэрлэгт яваагүй зожиг хүүхэд байсан болохоор маамуу наашир лав анхны дуулсан дуу биш. Бага байхад раажав зурагтаар явдаг дуунуудыг л сонсдог байв. Бас хааяа өвөө эмээгийнхээ дуулахыг сонсоно. Өвөө маань баян хуураа орныхоо хөндийгөөс гаргаж ирээд дарж эхлэхэд эмээ маань аяндаа аман дотроо аялаад эхэлдэгсэн.&#xA;Сургуульд ороод дуу хөгжмийн хичээл дээр заасан хэдэн дуу, тэгээд дээр нь энд тэндээс сонссон бас бусхан аялгуу, дууны тасархайгаар хөгжмийн боловсрол минь хязгаарлагдаж байлаа.</description>
+    </item>
+  </channel>
+</rss>

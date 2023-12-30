@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>antipatterns on Ochko</title><link>https://ochko.github.io/tags/antipatterns/</link><description>Recent content in antipatterns on Ochko</description><generator>Hugo -- gohugo.io</generator><language>mn</language><lastBuildDate>Thu, 03 Aug 2006 10:04:00 +0900</lastBuildDate><atom:link href="https://ochko.github.io/tags/antipatterns/index.xml" rel="self" type="application/rss+xml"/><item><title>Буруу үлгэр(Anti patterns)</title><link>https://ochko.github.io/tech/2006-08-anti-patterns/</link><pubDate>Thu, 03 Aug 2006 10:04:00 +0900</pubDate><guid>https://ochko.github.io/tech/2006-08-anti-patterns/</guid><description>Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves. —Alan Kay I am not terribly dogmatical about the goto statement. I have the uncomfortable feeling that others are making a religion out of it, as if the conceptual problems of programming could be solved by a single trick, by a simple form of coding discipline!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>antipatterns on Ochko</title>
+    <link>https://ochko.github.io/tags/antipatterns/</link>
+    <description>Recent content in antipatterns on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Thu, 03 Aug 2006 10:04:00 +0900</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/antipatterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Буруу үлгэр(Anti patterns)</title>
+      <link>https://ochko.github.io/tech/2006-08-anti-patterns/</link>
+      <pubDate>Thu, 03 Aug 2006 10:04:00 +0900</pubDate>
+      <guid>https://ochko.github.io/tech/2006-08-anti-patterns/</guid>
+      <description>Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves. —Alan Kay I am not terribly dogmatical about the goto statement. I have the uncomfortable feeling that others are making a religion out of it, as if the conceptual problems of programming could be solved by a single trick, by a simple form of coding discipline!</description>
+    </item>
+  </channel>
+</rss>

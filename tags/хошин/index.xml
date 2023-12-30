@@ -1,7 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>хошин on Ochko</title><link>https://ochko.github.io/tags/%D1%85%D0%BE%D1%88%D0%B8%D0%BD/</link><description>Recent content in хошин on Ochko</description><generator>Hugo -- gohugo.io</generator><language>mn</language><lastBuildDate>Wed, 31 Dec 2008 14:21:00 +0800</lastBuildDate><atom:link href="https://ochko.github.io/tags/%D1%85%D0%BE%D1%88%D0%B8%D0%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>If programming languages were ...</title><link>https://ochko.github.io/tech/2008-12-if-programming-languages-were/</link><pubDate>Wed, 31 Dec 2008 14:21:00 +0800</pubDate><guid>https://ochko.github.io/tech/2008-12-if-programming-languages-were/</guid><description>Хэрвээ програмчлалын хэл
-машин байсан бол&amp;hellip;
-шашин байсан бол&amp;hellip;
-метал хамтлаг байсан бол&amp;hellip;
-эмэгтэй хүн байсан бол&amp;hellip;
-завь байсан бол&amp;hellip;
-Энэ оны сүүлийн бичлэг. Шинэ оноо сайхан угтаарай. Ирэх ондоо хүн бүхэн амжилт бүтээл аз жаргалаар дүүрэн байх болтугай</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>хошин on Ochko</title>
+    <link>https://ochko.github.io/tags/%D1%85%D0%BE%D1%88%D0%B8%D0%BD/</link>
+    <description>Recent content in хошин on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Wed, 31 Dec 2008 14:21:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/%D1%85%D0%BE%D1%88%D0%B8%D0%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>If programming languages were ...</title>
+      <link>https://ochko.github.io/tech/2008-12-if-programming-languages-were/</link>
+      <pubDate>Wed, 31 Dec 2008 14:21:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2008-12-if-programming-languages-were/</guid>
+      <description>Хэрвээ програмчлалын хэл&#xA;машин байсан бол&amp;hellip;&#xA;шашин байсан бол&amp;hellip;&#xA;метал хамтлаг байсан бол&amp;hellip;&#xA;эмэгтэй хүн байсан бол&amp;hellip;&#xA;завь байсан бол&amp;hellip;&#xA;Энэ оны сүүлийн бичлэг. Шинэ оноо сайхан угтаарай. Ирэх ондоо хүн бүхэн амжилт бүтээл аз жаргалаар дүүрэн байх болтугай</description>
+    </item>
+  </channel>
+</rss>

@@ -1,22 +1,99 @@
-<!doctype html><html lang=mn><head><meta charset=utf-8><meta name=generator content="Hugo 0.97.3"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=twitter:card content="summary"><meta name=twitter:title content="Opening Emacs by keyboard shortcut on Linux and Mac OS X - Ochko"><meta name=twitter:description content="Linux Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно. эмакс ажиллаагүй байвал ажиллуулна эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор нээнэ  #!/bin/bash TITLE=&amp;#39;=Emacs=&amp;#39; running=`ps -eo fname | grep emacs | wc -l` if [ $running -ne 0 ] then  if [ $# -ne 0 ]  then  emacsclient -n $*  fi  wmctrl -a &amp;#34;$TITLE&amp;#34; else  xfce4-terminal --title=&amp;#34;$TITLE&amp;#34; --icon=&amp;#34;~/."><meta name=twitter:site content="https://ochko.github.io"><meta name=twitter:creator content="L.Ochirkhuyag"><meta name=twitter:image content="https://ochko.github.io/images/koen-stripe.jpg"><meta property="og:locale" content><meta property="og:type" content="article"><meta property="og:title" content="Opening Emacs by keyboard shortcut on Linux and Mac OS X - Ochko"><meta property="og:description" content="Linux Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно. эмакс ажиллаагүй байвал ажиллуулна эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор нээнэ  #!/bin/bash TITLE=&amp;#39;=Emacs=&amp;#39; running=`ps -eo fname | grep emacs | wc -l` if [ $running -ne 0 ] then  if [ $# -ne 0 ]  then  emacsclient -n $*  fi  wmctrl -a &amp;#34;$TITLE&amp;#34; else  xfce4-terminal --title=&amp;#34;$TITLE&amp;#34; --icon=&amp;#34;~/."><meta property="og:url" content="https://ochko.github.io/tech/2011-01-09-emacs-kbd-shortcut/"><meta property="og:site_name" content="Ochko"><meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg"><meta name=author content="L.Ochirkhuyag"><meta name=description content="Linux Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно. эмакс ажиллаагүй байвал ажиллуулна эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор нээнэ  #!/bin/bash TITLE=&amp;#39;=Emacs=&amp;#39; running=`ps -eo fname | grep emacs | wc -l` if [ $running -ne 0 ] then  if [ $# -ne 0 ]  then  emacsclient -n $*  fi  wmctrl -a &amp;#34;$TITLE&amp;#34; else  xfce4-terminal --title=&amp;#34;$TITLE&amp;#34; --icon=&amp;#34;~/."><title>Opening Emacs by keyboard shortcut on Linux and Mac OS X :: Ochko</title><link rel=stylesheet href=https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css><link rel=stylesheet href=/katex/katex.min.css media=print onload='this.media="all",this.onload=null'></head><body class=antialiased><div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col"><header class=mb-8><nav class="flex space-x-4" aria-label=Tabs><a href=/><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src=https://ochko.github.io/images/koen-stripe.jpg alt=L.Ochirkhuyag></a>
-<a href=https://ochko.github.io/posts/ class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
-<a href=https://ochko.github.io/tech/ class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a></nav></header><div class="flex-1 pt-10"><article class="prose max-w-none"><h1>Opening Emacs by keyboard shortcut on Linux and Mac OS X</h1><time class="text-sm text-right text-gray-600" datetime="2011-01-09 16:33:00 +08">2011-01-09</time><div class=pt-4><h3 id=linux>Linux</h3><p>Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно.<div markdown=1></p><ul><li>эмакс ажиллаагүй байвал ажиллуулна</li><li>эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ</li><li>параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор
-нээнэ</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>TITLE<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;=Emacs=&#39;</span>
-</span></span><span style=display:flex><span>running<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>ps -eo fname | grep emacs | wc -l<span style=color:#e6db74>`</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $running -ne <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>then</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $# -ne <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>then</span>
-</span></span><span style=display:flex><span>    emacsclient -n $*
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>fi</span>
-</span></span><span style=display:flex><span>  wmctrl -a <span style=color:#e6db74>&#34;</span>$TITLE<span style=color:#e6db74>&#34;</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>
-</span></span><span style=display:flex><span>  xfce4-terminal --title<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$TITLE<span style=color:#e6db74>&#34;</span> --icon<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;~/.icons/emacs.png&#34;</span> --maximize -x emacs $*
-</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Opening Emacs by keyboard shortcut on Linux and Mac OS X - Ochko">
+  <meta name="twitter:description" content="Linux Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно.
+эмакс ажиллаагүй байвал ажиллуулна эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор нээнэ #!/bin/bash TITLE=&amp;#39;=Emacs=&amp;#39; running=`ps -eo fname | grep emacs | wc -l` if [ $running -ne 0 ] then if [ $# -ne 0 ] then emacsclient -n $* fi wmctrl -a &amp;#34;$TITLE&amp;#34; else xfce4-terminal --title=&amp;#34;$TITLE&amp;#34; --icon=&amp;#34;~/.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Opening Emacs by keyboard shortcut on Linux and Mac OS X - Ochko">
+  <meta property="og:description" content="Linux Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно.
+эмакс ажиллаагүй байвал ажиллуулна эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор нээнэ #!/bin/bash TITLE=&amp;#39;=Emacs=&amp;#39; running=`ps -eo fname | grep emacs | wc -l` if [ $running -ne 0 ] then if [ $# -ne 0 ] then emacsclient -n $* fi wmctrl -a &amp;#34;$TITLE&amp;#34; else xfce4-terminal --title=&amp;#34;$TITLE&amp;#34; --icon=&amp;#34;~/.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2011-01-09-emacs-kbd-shortcut/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Linux Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно.
+эмакс ажиллаагүй байвал ажиллуулна эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор нээнэ #!/bin/bash TITLE=&amp;#39;=Emacs=&amp;#39; running=`ps -eo fname | grep emacs | wc -l` if [ $running -ne 0 ] then if [ $# -ne 0 ] then emacsclient -n $* fi wmctrl -a &amp;#34;$TITLE&amp;#34; else xfce4-terminal --title=&amp;#34;$TITLE&amp;#34; --icon=&amp;#34;~/.">
+
+  <title>Opening Emacs by keyboard shortcut on Linux and Mac OS X :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.460c2314eb8012ef5a2cec67c95f6d3d349d6dcb3d8be5ac13012b5b0afe9960.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+          <div id="search"></div>
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Opening Emacs by keyboard shortcut on Linux and Mac OS X</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2011-01-09 16:33:00 &#43;08">2011-01-09</time>
+  <div class="pt-4">
+    <h3 id="linux">Linux</h3>
+<p>Доорхи скрипт нь Линукс систем дээр эмакс нээх зориулалттай. Дараах 3 нөхцлийг тооцно.<div markdown="1"></p>
+<ul>
+<li>эмакс ажиллаагүй байвал ажиллуулна</li>
+<li>эмакс ажиллаж байвал ажиллаж байгаа цонхыг идэвхжүүлнэ</li>
+<li>параметр заасан тохиолдолд өгөгдсөн файлыг ажиллж байгаа эмакс дотор
+нээнэ</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>TITLE<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;=Emacs=&#39;</span>
+</span></span><span style="display:flex;"><span>running<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>ps -eo fname | grep emacs | wc -l<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $running -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    emacsclient -n $*
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>  wmctrl -a <span style="color:#e6db74">&#34;</span>$TITLE<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>  xfce4-terminal --title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$TITLE<span style="color:#e6db74">&#34;</span> --icon<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;~/.icons/emacs.png&#34;</span> --maximize -x emacs $*
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
 </span></span></code></pre></div><p>Энэ скриптийг файлд хадгалаад shortcut заагаад өгчихвөл хаанаас ч эмакс
-руу ганц shortcut дараад орохоор боллоо.</p><h3 id=mac-os-x>Mac OS X</h3><p>Үүнийг Mac дээр applescript ашиглаад иймэрхүү байдлаар хийж болно. Илүү
-амар арга байвал санал болгоорой.</p><pre tabindex=0><code>try
+руу ганц shortcut дараад орохоор боллоо.</p>
+<h3 id="mac-os-x">Mac OS X</h3>
+<p>Үүнийг Mac дээр applescript ашиглаад иймэрхүү байдлаар хийж болно. Илүү
+амар арга байвал санал болгоорой.</p>
+<pre tabindex="0"><code>try
   set psgrep to (do shell script &#34;ps -o &#39;tty command&#39; | grep emacs | grep -v grep&#34;)
   set ttyname to &#34;/dev/&#34; &amp; (first word of psgrep)
   tell application &#34;iTerm&#34;
@@ -40,7 +117,48 @@ on error
     end tell
   end tell
 end try
-</code></pre><p><strong>Холбоос:</strong></p><ul><li><a href=https://github.com/ochko/scripts-linux>https://github.com/ochko/scripts-linux</a></li><li><a href=https://github.com/ochko/scripts-mac>https://github.com/ochko/scripts-mac</a></li><li><a href=http://iterm.sourceforge.net/scripting.shtml>http://iterm.sourceforge.net/scripting.shtml</a></li></ul></div></article></div><footer class=mt-12><div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t"><div class="md:mr-12 md:w-1/2"><a href=https://ochko.github.io/tech/2012-09-coder-mn/ class=block><span class="block font-semibold text-gray-600">Previous</span>
-<span class=block>Кодер сайтын 3 дахь удаагийн шинэчлэл</span></a></div><div class="md:text-right mt-4 md:mt-0"><a href=https://ochko.github.io/tech/2011-01-twitter-buzz-fb/ class=block><span class="block font-semibold text-gray-600">Next</span>
-<span class=block>Twitter, Buzz, FB,...</span></a></div></div><div class="text-xs text-center">&copy; 2006-2022 L.Ochirkhuyag</div></footer></div><script defer src=/katex/katex.min.js></script>
-<script defer src=/katex/auto-render.min.js onload=renderMathInElement(document.body)></script></body></html>
+</code></pre><p><strong>Холбоос:</strong></p>
+<ul>
+<li><a href="https://github.com/ochko/scripts-linux">https://github.com/ochko/scripts-linux</a></li>
+<li><a href="https://github.com/ochko/scripts-mac">https://github.com/ochko/scripts-mac</a></li>
+<li><a href="http://iterm.sourceforge.net/scripting.shtml">http://iterm.sourceforge.net/scripting.shtml</a></li>
+</ul>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2012-09-coder-mn/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Кодер сайтын 3 дахь удаагийн шинэчлэл</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2011-01-twitter-buzz-fb/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Twitter, Buzz, FB,...</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="/pagefind/pagefind-ui.js"</script>
+    <script>window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+  </body>
+</html>

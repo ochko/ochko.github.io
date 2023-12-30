@@ -1,13 +1,124 @@
-<!doctype html><html lang=mn><head><meta charset=utf-8><meta name=generator content="Hugo 0.97.3"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=twitter:card content="summary"><meta name=twitter:title content="Том муужгайг хэржигнүүлэх нь - Ochko"><meta name=twitter:description content="Түлхүүр үг: Tomcat profiling
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Том муужгайг хэржигнүүлэх нь - Ochko">
+  <meta name="twitter:description" content="Түлхүүр үг: Tomcat profiling
 Том муужгайн(Tomcat) дотор юу болж байгааг тольдон харах гурван аргыг туршиж үзсэнээ танилцуулья. Хоёр нь Eclipse дээрээс харах арга, нэг нь Borland Optimizeit.
-Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно."><meta name=twitter:site content="https://ochko.github.io"><meta name=twitter:creator content="L.Ochirkhuyag"><meta name=twitter:image content="https://ochko.github.io/images/koen-stripe.jpg"><meta property="og:locale" content><meta property="og:type" content="article"><meta property="og:title" content="Том муужгайг хэржигнүүлэх нь - Ochko"><meta property="og:description" content="Түлхүүр үг: Tomcat profiling
+Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Том муужгайг хэржигнүүлэх нь - Ochko">
+  <meta property="og:description" content="Түлхүүр үг: Tomcat profiling
 Том муужгайн(Tomcat) дотор юу болж байгааг тольдон харах гурван аргыг туршиж үзсэнээ танилцуулья. Хоёр нь Eclipse дээрээс харах арга, нэг нь Borland Optimizeit.
-Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно."><meta property="og:url" content="https://ochko.github.io/tech/2007-01-tomcat-profiling/"><meta property="og:site_name" content="Ochko"><meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg"><meta name=author content="L.Ochirkhuyag"><meta name=description content="Түлхүүр үг: Tomcat profiling
+Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2007-01-tomcat-profiling/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Түлхүүр үг: Tomcat profiling
 Том муужгайн(Tomcat) дотор юу болж байгааг тольдон харах гурван аргыг туршиж үзсэнээ танилцуулья. Хоёр нь Eclipse дээрээс харах арга, нэг нь Borland Optimizeit.
-Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно."><title>Том муужгайг хэржигнүүлэх нь :: Ochko</title><link rel=stylesheet href=https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css><link rel=stylesheet href=/katex/katex.min.css media=print onload='this.media="all",this.onload=null'></head><body class=antialiased><div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col"><header class=mb-8><nav class="flex space-x-4" aria-label=Tabs><a href=/><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src=https://ochko.github.io/images/koen-stripe.jpg alt=L.Ochirkhuyag></a>
-<a href=https://ochko.github.io/posts/ class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
-<a href=https://ochko.github.io/tech/ class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a></nav></header><div class="flex-1 pt-10"><article class="prose max-w-none"><h1>Том муужгайг хэржигнүүлэх нь</h1><time class="text-sm text-right text-gray-600" datetime="2007-01-06 23:06:00 +08">2007-01-06</time><div class=pt-4><p><img src=/tech/images/2007-01-tomcat-profiling-logo.jpg alt>
-Түлхүүр үг: Tomcat profiling</p><p>Том муужгайн(<a href=http://tomcat.apache.org/>Tomcat</a>) дотор юу болж байгааг тольдон харах гурван аргыг туршиж үзсэнээ танилцуулья. Хоёр нь <a href=http://www.eclipse.org/>Eclipse</a> дээрээс харах арга, нэг нь <a href=http://www.borland.com/us/products/optimizeit/>Borland Optimizeit</a>.</p><p>Эхнийх нь Eclipse-ийн <a href=http://www.eclipse.org/tptp/>TPTP</a>. Хэрхэн тохируулах аргыг <a href=http://nileshbansal.blogspot.com/2006/07/profiling-with-eclipse.html>энд</a> их ойлгомжтой бичсэн байгаа. Бас <a href="http://www.onjava.com/pub/a/onjava/2006/08/16/profiling-with-eclipse-callisto.html?page=1">ONJava дээр</a> үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно. Үүний тулд сэрвэр дээрээ Agent controller -гэдэг холбогч програмыг суулгаад бас Том муужгайнхаа тохиргоон дээр жаахан юм нэмж өгөөд л болоо. Харин системийн зарим нэмэлт модулиудыг суулгасан байх хэрэгтэй юм байна лээ.</p><p>Дараагийнх нь <a href=http://sourceforge.net/projects/eclipsecolorer>Eclipse Profiler Plugin</a>. <a href=http://eclipsecolorer.sourceforge.net/index_profiler.html>Sourceforge дээр</a> хэрхэн том муужгай болоод бас бусад апликэшн сэрвэрүүдийг тагнуулдах тохиргоог үзүүлсэн байна. Хамгийн гоё нь аль обьектоос аль обьект дуудагдаж үүсч байгааг граф байдлаар харуулж байна лээ. Санах ой дүүрэх зэрэг алдааг илрүүлэхэд их хэрэгтэй гэсэн үг. Тохиргоо нь л жаахан төвөгтэй юм даа.</p><p>Гурав дахь нь <a href=http://www.borland.com/downloads/download_optimizeit.html>Borland Optimizeit</a>. Энийг дээхнэ туршиж үзэж байсан, жаахан үнэтэй програм. Том муурыг Optimizeit дотроо ажиллуулаад, маш олон төрлийн үзүүлэлтээр тольдож чадна. Обьектуудын холбоосыг мод хэлбэрээр, санах ойн эзлэлтээр жагсаах гээд их дажгүй. Апликэшнийхээ доголдолыг илрүүлэхэд тун сайн эд шиг санагдсан, даанч үнэтэй.</p><p>Би вээр туршиж үзэж амжаагүй байгаа тул, танд сонирхолтой санагдах аваас NetBeans дээр хэрхэн профайлдахыг <a href=http://www.netbeans.org/kb/55/profiler-index.html>эндээс</a> ороод судлаарай.</p><p>Ингээд дээрх профайлэруудыг алийг ч хэрэглэлээ гэсэн вэб апликэшнээ стрессд оруулж ядраангаа дотор нь юу болж байгаа, ямар хэсэгтээ ачаалал их ирж байгаа, санах ой дүүрэх нь үү, яах нь вэ гэдгийг үзэх хэрэгтэй. Иймэрхүү стрэссд оруулдаг багажууд гэвэл миний хэрэглэж үзсэн нь <a href=http://jakarta.apache.org/jmeter/>Apache JMeter</a> байна, боломжын байсан. Бас <a href=http://www.microsoft.com/technet/archive/itsolutions/intranet/downloads/webstres.mspx>Microsoft-ийн Web Application Stress Tool</a> байна. Microsoft-ийн програм болохоор нэгэн зэрэг 200-аас дээш хандалт үүсгэж чаддаггүй юм билээ. JMeter бол 500-г лав үүсгэж чадаж байсан.</p><p>Хэрэг болж мэдэх холбоосууд:</p><ul><li><a href=http://www.manageability.org/blog/stuff/open-source-profilers-for-java>Open Source Profilers for Java</a></li><li><a href=http://www.softwareqatest.com/qatweb1.html>Web Site Test Tools and Site Management Tools</a></li></ul></div></article></div><footer class=mt-12><div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t"><div class="md:mr-12 md:w-1/2"><a href=https://ochko.github.io/tech/2007-01-virtualization/ class=block><span class="block font-semibold text-gray-600">Previous</span>
-<span class=block>Виртуалчлал</span></a></div><div class="md:text-right mt-4 md:mt-0"><a href=https://ochko.github.io/tech/2007-01-cs-study/ class=block><span class="block font-semibold text-gray-600">Next</span>
-<span class=block>Компьютерээр сурч буй Оюутнуудад</span></a></div></div><div class="text-xs text-center">&copy; 2006-2022 L.Ochirkhuyag</div></footer></div><script defer src=/katex/katex.min.js></script>
-<script defer src=/katex/auto-render.min.js onload=renderMathInElement(document.body)></script></body></html>
+Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно.">
+
+  <title>Том муужгайг хэржигнүүлэх нь :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.460c2314eb8012ef5a2cec67c95f6d3d349d6dcb3d8be5ac13012b5b0afe9960.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+          <div id="search"></div>
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Том муужгайг хэржигнүүлэх нь</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2007-01-06 23:06:00 &#43;08">2007-01-06</time>
+  <div class="pt-4">
+    <p><img src="/tech/images/2007-01-tomcat-profiling-logo.jpg" alt="">
+Түлхүүр үг: Tomcat profiling</p>
+<p>Том муужгайн(<a href="http://tomcat.apache.org/">Tomcat</a>) дотор юу болж байгааг тольдон харах гурван аргыг туршиж үзсэнээ танилцуулья. Хоёр нь <a href="http://www.eclipse.org/">Eclipse</a> дээрээс харах арга, нэг нь <a href="http://www.borland.com/us/products/optimizeit/">Borland Optimizeit</a>.</p>
+<p>Эхнийх нь Eclipse-ийн <a href="http://www.eclipse.org/tptp/">TPTP</a>. Хэрхэн тохируулах аргыг <a href="http://nileshbansal.blogspot.com/2006/07/profiling-with-eclipse.html">энд</a> их ойлгомжтой бичсэн байгаа. Бас <a href="http://www.onjava.com/pub/a/onjava/2006/08/16/profiling-with-eclipse-callisto.html?page=1">ONJava дээр</a> үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно. Үүний тулд сэрвэр дээрээ Agent controller -гэдэг холбогч програмыг суулгаад бас Том муужгайнхаа тохиргоон дээр жаахан юм нэмж өгөөд л болоо. Харин системийн зарим нэмэлт модулиудыг суулгасан байх хэрэгтэй юм байна лээ.</p>
+<p>Дараагийнх нь <a href="http://sourceforge.net/projects/eclipsecolorer">Eclipse Profiler Plugin</a>. <a href="http://eclipsecolorer.sourceforge.net/index_profiler.html">Sourceforge дээр</a> хэрхэн том муужгай болоод бас бусад апликэшн сэрвэрүүдийг тагнуулдах тохиргоог үзүүлсэн байна. Хамгийн гоё нь аль обьектоос аль обьект дуудагдаж үүсч байгааг граф байдлаар харуулж байна лээ. Санах ой дүүрэх зэрэг алдааг илрүүлэхэд их хэрэгтэй гэсэн үг. Тохиргоо нь л жаахан төвөгтэй юм даа.</p>
+<p>Гурав дахь нь <a href="http://www.borland.com/downloads/download_optimizeit.html">Borland Optimizeit</a>. Энийг дээхнэ туршиж үзэж байсан, жаахан үнэтэй програм. Том муурыг Optimizeit дотроо ажиллуулаад, маш олон төрлийн үзүүлэлтээр тольдож чадна. Обьектуудын холбоосыг мод хэлбэрээр, санах ойн эзлэлтээр жагсаах гээд их дажгүй. Апликэшнийхээ доголдолыг илрүүлэхэд тун сайн эд шиг санагдсан, даанч үнэтэй.</p>
+<p>Би вээр туршиж үзэж амжаагүй байгаа тул, танд сонирхолтой санагдах аваас NetBeans дээр хэрхэн профайлдахыг <a href="http://www.netbeans.org/kb/55/profiler-index.html">эндээс</a> ороод судлаарай.</p>
+<p>Ингээд дээрх профайлэруудыг алийг ч хэрэглэлээ гэсэн вэб апликэшнээ стрессд оруулж ядраангаа дотор нь юу болж байгаа, ямар хэсэгтээ ачаалал их ирж байгаа, санах ой дүүрэх нь үү, яах нь вэ гэдгийг үзэх хэрэгтэй. Иймэрхүү стрэссд оруулдаг багажууд гэвэл миний хэрэглэж үзсэн нь <a href="http://jakarta.apache.org/jmeter/">Apache JMeter</a> байна, боломжын байсан. Бас <a href="http://www.microsoft.com/technet/archive/itsolutions/intranet/downloads/webstres.mspx">Microsoft-ийн Web Application Stress Tool</a> байна. Microsoft-ийн програм болохоор нэгэн зэрэг 200-аас дээш хандалт үүсгэж чаддаггүй юм билээ. JMeter бол 500-г лав үүсгэж чадаж байсан.</p>
+<p>Хэрэг болж мэдэх холбоосууд:</p>
+<ul>
+<li><a href="http://www.manageability.org/blog/stuff/open-source-profilers-for-java">Open Source Profilers for Java</a></li>
+<li><a href="http://www.softwareqatest.com/qatweb1.html">Web Site Test Tools and Site Management Tools</a></li>
+</ul>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2007-01-virtualization/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Виртуалчлал</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2007-01-cs-study/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Компьютерээр сурч буй Оюутнуудад</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="/pagefind/pagefind-ui.js"</script>
+    <script>window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+  </body>
+</html>

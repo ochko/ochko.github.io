@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>android on Ochko</title><link>https://ochko.github.io/tags/android/</link><description>Recent content in android on Ochko</description><generator>Hugo -- gohugo.io</generator><language>mn</language><lastBuildDate>Mon, 23 Jun 2008 15:19:00 +0800</lastBuildDate><atom:link href="https://ochko.github.io/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Android</title><link>https://ochko.github.io/tech/2008-06-android/</link><pubDate>Mon, 23 Jun 2008 15:19:00 +0800</pubDate><guid>https://ochko.github.io/tech/2008-06-android/</guid><description>Гүүгэл цаана чинь шүүгэл дугаргалаа шүү! Android бол Нээлттэй мобайл платформ. Мобайл ертөнц рүү гүүглийнхэн нээлттэй өвөрмөц арга барилаараа орж байгаа нь энэ андройд. Линукс үйлдлийн систем дээр Жава програмчлалын хэлийг нэмээд хүн бүхний гарт бариулчихаар юу болохов? Удахгүй хэдхэн сарын дараа яг тэр чинь болох нь дээ. OpenGL, CDMA, GSM, GPS,&amp;hellip; гээд орчин үеийн мобайл хэрэглэлд юу байх ёстой билээ бүгд бий. Гар утасны томоохон үйлдвэрлэгчид андройд утас гаргахаа мэдэгдээд байгаа билээ.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on Ochko</title>
+    <link>https://ochko.github.io/tags/android/</link>
+    <description>Recent content in android on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Mon, 23 Jun 2008 15:19:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android</title>
+      <link>https://ochko.github.io/tech/2008-06-android/</link>
+      <pubDate>Mon, 23 Jun 2008 15:19:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2008-06-android/</guid>
+      <description>Гүүгэл цаана чинь шүүгэл дугаргалаа шүү! Android бол Нээлттэй мобайл платформ. Мобайл ертөнц рүү гүүглийнхэн нээлттэй өвөрмөц арга барилаараа орж байгаа нь энэ андройд. Линукс үйлдлийн систем дээр Жава програмчлалын хэлийг нэмээд хүн бүхний гарт бариулчихаар юу болохов? Удахгүй хэдхэн сарын дараа яг тэр чинь болох нь дээ. OpenGL, CDMA, GSM, GPS,&amp;hellip; гээд орчин үеийн мобайл хэрэглэлд юу байх ёстой билээ бүгд бий. Гар утасны томоохон үйлдвэрлэгчид андройд утас гаргахаа мэдэгдээд байгаа билээ.</description>
+    </item>
+  </channel>
+</rss>

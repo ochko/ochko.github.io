@@ -1,6 +1,152 @@
-<!doctype html><html lang=mn><head><meta charset=utf-8><meta name=generator content="Hugo 0.97.3"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=twitter:card content="summary"><meta name=twitter:title content="Хэлмэрчтэй хэлүүд(Interpreted languages) - Ochko"><meta name=twitter:description content="Programs must be written for people to read, and only incidentally for machines to execute.  —Abelson &amp;amp; Sussman, SICP, preface to the first edition    I want to see people using Perl to glue things together creatively, not just technically but also socially.  —Larry Wall    The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid."><meta name=twitter:site content="https://ochko.github.io"><meta name=twitter:creator content="L.Ochirkhuyag"><meta name=twitter:image content="https://ochko.github.io/images/koen-stripe.jpg"><meta property="og:locale" content><meta property="og:type" content="article"><meta property="og:title" content="Хэлмэрчтэй хэлүүд(Interpreted languages) - Ochko"><meta property="og:description" content="Programs must be written for people to read, and only incidentally for machines to execute.  —Abelson &amp;amp; Sussman, SICP, preface to the first edition    I want to see people using Perl to glue things together creatively, not just technically but also socially.  —Larry Wall    The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid."><meta property="og:url" content="https://ochko.github.io/tech/2006-07-interpreted-languages/"><meta property="og:site_name" content="Ochko"><meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg"><meta name=author content="L.Ochirkhuyag"><meta name=description content="Programs must be written for people to read, and only incidentally for machines to execute.  —Abelson &amp;amp; Sussman, SICP, preface to the first edition    I want to see people using Perl to glue things together creatively, not just technically but also socially.  —Larry Wall    The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid."><title>Хэлмэрчтэй хэлүүд(Interpreted languages) :: Ochko</title><link rel=stylesheet href=https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css><link rel=stylesheet href=/katex/katex.min.css media=print onload='this.media="all",this.onload=null'></head><body class=antialiased><div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col"><header class=mb-8><nav class="flex space-x-4" aria-label=Tabs><a href=/><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src=https://ochko.github.io/images/koen-stripe.jpg alt=L.Ochirkhuyag></a>
-<a href=https://ochko.github.io/posts/ class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
-<a href=https://ochko.github.io/tech/ class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a></nav></header><div class="flex-1 pt-10"><article class="prose max-w-none"><h1>Хэлмэрчтэй хэлүүд(Interpreted languages)</h1><time class="text-sm text-right text-gray-600" datetime="2006-07-07 02:14:00 +09">2006-07-07</time><div class=pt-4><div class="flex justify-between mt-2 mb-3 mr-4"><div></div><div class="max-w-sm text-sm font-serif"><div class=text-black>Programs must be written for people to read, and only incidentally for machines to execute.</div><div class="italic text-right pt-1">—Abelson & Sussman, SICP, preface to the first edition</div></div></div><div class="flex justify-between mt-2 mb-3 mr-4"><div></div><div class="max-w-sm text-sm font-serif"><div class=text-black>I want to see people using Perl to glue things together creatively, not just technically but also socially.</div><div class="italic text-right pt-1">—Larry Wall</div></div></div><div class="flex justify-between mt-2 mb-3 mr-4"><div></div><div class="max-w-sm text-sm font-serif"><div class=text-black>The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid.</div><div class="italic text-right pt-1">—Michael Fogus, The Joy of Clojure</div></div></div><h3 id=interpreted-programming-languages>Interpreted programming languages</h3><p>&ldquo;Хэлмэрчтэй програмчлалын хэлүүд&rdquo; эсхүл &ldquo;Хэлмэрчтэй хэлүүд&rdquo; гэхээр хөгийн сонсдож байгаа байх, &ldquo;interpreted languages&rdquo;-ийг орчуулж байгаа нь энэ л дээ. Програмчлалын хэлүүдийг хөрвүүлэгдэх хэлбэрээр нь хөрвүүлэгдсэн(compiled) болон хэлмэрчтэй(interpreted) гэж ангилдаг. Хөрвүүлэгдсэн програмын код нь тухайн хатуумж(hardware)даа зориулагдсан байдаг. Interpreted language гэдэг нь хагас хөрвүүлэгдсэн эсвэл огт хөрвүүлэлт хийгдээгүй хэлбэртэйгээр ажилладаг хэлүүд юм. Эдгээр хэлүүд дээрх програм нь хатуумжид зориулагдан хөрвөдөггүй, харин хэлмэрч буюу interpreter нь програмыг ажиллуулах үедээ тухайн хатуумжийн хэл рүү(хамгийн доод түвшний хэл) хөрвүүлдэг.</p><p>Хэлмэрчтэй ажиллах програмууд хөрвүүлэгдсэн програмаас удаан ажилладаг боловч нилээд олон давуу талуудтай:</p><ul><li>Платформоос(хатуумж болон үйлдлийн систем) хамааралгүй</li><li>Дебаг хийхэд амар</li><li>Динамик төрөл ашиглах</li><li>Програмын хэмжээ бага</li></ul><p>Эдгээрээс гадна хэлмэрчтэй хэл дээр код бичих &ldquo;засаад->хэлмэрчлээд->дебагдах&rdquo; -гэсэн цикл нь хөрвүүлэгдсэн хэл дээрх &ldquo;засаад->хөрвүүлээд->ажиллуулаад->дебагдах&rdquo; -гэсэн циклээс хурдан байдаг. Учир нь бүхэл програмыг хөрвүүлэхээс багахан хэсгийг хэлмэрчлэн ажиллуулах нь хурдан, тэгээд ч дебаг хийгдэх боломж нь их, кодын тунгалаг чанар сайн байдаг. Хөрвүүлэгдсэн програмын хурдан ажиллах чанар, хэлмэрчтэй програмын хөгжүүлэхэд хялбар байх чанаруудыг зарим хэлүүд дээр хослуулсан байдаг. Жишээ нь Common LISP-ийн зарим хувилбарууд хагас хөрвүүлэгдсэн хэлбэрт хөгжүүлэлт хийгээд эцсийн бүтээгдэхүүнээ бүрэн хөрвүүлэгдсэн байдлаар гаргах боломжтой байдаг. Мөн JVM(Жава виртуал машин) нь хагас хөрвүүлэгдсэн жавагийн байткодыг ажиллуулах үедээ шаардлагатай хэсгүүдийг бүрэн хөрвүүлж хадгалаад ашигладаг. Энэ аргыг JIT(Just in time) хөрвүүлэлт гэдэг ба .NET -ийн CLR(Common Language Runtime) нь CIL(Common Intermediate Language) дээр байгаа програмын кодыг ажиллуулахдаа бас JIT хөрвүүлэлтийг хийдэг байна.</p><p>Үнэндээ C, C++ гэх мэт хөрвүүлэгдсэн хэлүүд ч дотроо хэлмэрчээр дамжигдан хөрвөдөг. Гэхдээ хэлмэрч нь хөрвүүлэгчийнхээ салшгүй хэсэг болсон байдаг. Түгээмэл хэрэглэгддэг хэлмэрчтэй хэлүүд гэвэл:</p><ul><li>Java(байткод руу хөрвөөд виртуал машин дотор ажилладаг)</li><li>Lisp(хөрвөгдөөгүй эсвэл хагас хөрвөсөн эсвэл бүрэн хөрвөсөн байдлаар)</li><li>ASP(Вэб хуудас хийдэг скрипт хэл)</li><li>PERL(байткод руу хөрвөөд хэлмэрчлэгдэж ажилладаг)</li><li>BASIC(хэлмэрчтэй ажилладаг)</li><li>PHP(байткод руу хөрвүүлэгдээд хэлмэрчлэгдэж ажилладаг)</li><li>JavaScript(HTML дотор дагалдаж браузераар хэлмэрчлэгддэг)</li></ul></div></article></div><footer class=mt-12><div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t"><div class="md:mr-12 md:w-1/2"><a href=https://ochko.github.io/tech/2006-07-design-patterns/ class=block><span class="block font-semibold text-gray-600">Previous</span>
-<span class=block>Дизайны үлгэрүүд(Design patterns)</span></a></div><div class="md:text-right mt-4 md:mt-0"><a href=https://ochko.github.io/tech/2006-06-rss-feed/ class=block><span class="block font-semibold text-gray-600">Next</span>
-<span class=block>Блог дээрээ RSS оруулав</span></a></div></div><div class="text-xs text-center">&copy; 2006-2022 L.Ochirkhuyag</div></footer></div><script defer src=/katex/katex.min.js></script>
-<script defer src=/katex/auto-render.min.js onload=renderMathInElement(document.body)></script></body></html>
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Хэлмэрчтэй хэлүүд(Interpreted languages) - Ochko">
+  <meta name="twitter:description" content="Programs must be written for people to read, and only incidentally for machines to execute. —Abelson &amp;amp; Sussman, SICP, preface to the first edition I want to see people using Perl to glue things together creatively, not just technically but also socially. —Larry Wall The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid. —Michael Fogus, The Joy of Clojure Interpreted programming languages &amp;ldquo;Хэлмэрчтэй програмчлалын хэлүүд&amp;rdquo; эсхүл &amp;ldquo;Хэлмэрчтэй хэлүүд&amp;rdquo; гэхээр хөгийн сонсдож байгаа байх, &amp;ldquo;interpreted languages&amp;rdquo;-ийг орчуулж байгаа нь энэ л дээ.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Хэлмэрчтэй хэлүүд(Interpreted languages) - Ochko">
+  <meta property="og:description" content="Programs must be written for people to read, and only incidentally for machines to execute. —Abelson &amp;amp; Sussman, SICP, preface to the first edition I want to see people using Perl to glue things together creatively, not just technically but also socially. —Larry Wall The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid. —Michael Fogus, The Joy of Clojure Interpreted programming languages &amp;ldquo;Хэлмэрчтэй програмчлалын хэлүүд&amp;rdquo; эсхүл &amp;ldquo;Хэлмэрчтэй хэлүүд&amp;rdquo; гэхээр хөгийн сонсдож байгаа байх, &amp;ldquo;interpreted languages&amp;rdquo;-ийг орчуулж байгаа нь энэ л дээ.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2006-07-interpreted-languages/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Programs must be written for people to read, and only incidentally for machines to execute. —Abelson &amp;amp; Sussman, SICP, preface to the first edition I want to see people using Perl to glue things together creatively, not just technically but also socially. —Larry Wall The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid. —Michael Fogus, The Joy of Clojure Interpreted programming languages &amp;ldquo;Хэлмэрчтэй програмчлалын хэлүүд&amp;rdquo; эсхүл &amp;ldquo;Хэлмэрчтэй хэлүүд&amp;rdquo; гэхээр хөгийн сонсдож байгаа байх, &amp;ldquo;interpreted languages&amp;rdquo;-ийг орчуулж байгаа нь энэ л дээ.">
+
+  <title>Хэлмэрчтэй хэлүүд(Interpreted languages) :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.460c2314eb8012ef5a2cec67c95f6d3d349d6dcb3d8be5ac13012b5b0afe9960.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+          <div id="search"></div>
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Хэлмэрчтэй хэлүүд(Interpreted languages)</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2006-07-07 02:14:00 &#43;09">2006-07-07</time>
+  <div class="pt-4">
+    <div class="flex justify-between mt-2 mb-3 mr-4">
+  <div></div>
+  <div class="max-w-sm text-sm font-serif">
+    <div class="text-black">
+Programs must be written for people to read, and only incidentally for machines to execute.
+</div>
+    <div class="italic text-right pt-1">—Abelson &amp; Sussman, SICP, preface to the first edition</div>
+  </div>
+</div>
+<div class="flex justify-between mt-2 mb-3 mr-4">
+  <div></div>
+  <div class="max-w-sm text-sm font-serif">
+    <div class="text-black">
+I want to see people using Perl to glue things together creatively, not just technically but also socially.
+</div>
+    <div class="italic text-right pt-1">—Larry Wall</div>
+  </div>
+</div>
+<div class="flex justify-between mt-2 mb-3 mr-4">
+  <div></div>
+  <div class="max-w-sm text-sm font-serif">
+    <div class="text-black">
+The apprentice avoids all use of Java classes. The journeyman embraces Java classes. The master knows which classes to embrace and which to avoid.
+</div>
+    <div class="italic text-right pt-1">—Michael Fogus, The Joy of Clojure</div>
+  </div>
+</div>
+<h3 id="interpreted-programming-languages">Interpreted programming languages</h3>
+<p>&ldquo;Хэлмэрчтэй програмчлалын хэлүүд&rdquo; эсхүл &ldquo;Хэлмэрчтэй хэлүүд&rdquo; гэхээр хөгийн сонсдож байгаа байх, &ldquo;interpreted languages&rdquo;-ийг орчуулж байгаа нь энэ л дээ. Програмчлалын хэлүүдийг хөрвүүлэгдэх хэлбэрээр нь хөрвүүлэгдсэн(compiled) болон хэлмэрчтэй(interpreted) гэж ангилдаг. Хөрвүүлэгдсэн програмын код нь тухайн хатуумж(hardware)даа зориулагдсан байдаг. Interpreted language гэдэг нь хагас хөрвүүлэгдсэн эсвэл огт хөрвүүлэлт хийгдээгүй хэлбэртэйгээр ажилладаг хэлүүд юм. Эдгээр хэлүүд дээрх програм нь хатуумжид зориулагдан хөрвөдөггүй, харин хэлмэрч буюу interpreter нь програмыг ажиллуулах үедээ тухайн хатуумжийн хэл рүү(хамгийн доод түвшний хэл) хөрвүүлдэг.</p>
+<p>Хэлмэрчтэй ажиллах програмууд хөрвүүлэгдсэн програмаас удаан ажилладаг боловч нилээд олон давуу талуудтай:</p>
+<ul>
+<li>Платформоос(хатуумж болон үйлдлийн систем) хамааралгүй</li>
+<li>Дебаг хийхэд амар</li>
+<li>Динамик төрөл ашиглах</li>
+<li>Програмын хэмжээ бага</li>
+</ul>
+<p>Эдгээрээс гадна хэлмэрчтэй хэл дээр код бичих &ldquo;засаад-&gt;хэлмэрчлээд-&gt;дебагдах&rdquo; -гэсэн цикл нь хөрвүүлэгдсэн хэл дээрх &ldquo;засаад-&gt;хөрвүүлээд-&gt;ажиллуулаад-&gt;дебагдах&rdquo; -гэсэн циклээс хурдан байдаг. Учир нь бүхэл програмыг хөрвүүлэхээс багахан хэсгийг хэлмэрчлэн ажиллуулах нь хурдан, тэгээд ч дебаг хийгдэх боломж нь их, кодын тунгалаг чанар сайн байдаг. Хөрвүүлэгдсэн програмын хурдан ажиллах чанар, хэлмэрчтэй програмын хөгжүүлэхэд хялбар байх чанаруудыг зарим хэлүүд дээр хослуулсан байдаг. Жишээ нь Common LISP-ийн зарим хувилбарууд хагас хөрвүүлэгдсэн хэлбэрт хөгжүүлэлт хийгээд эцсийн бүтээгдэхүүнээ бүрэн хөрвүүлэгдсэн байдлаар гаргах боломжтой байдаг. Мөн JVM(Жава виртуал машин) нь хагас хөрвүүлэгдсэн жавагийн байткодыг ажиллуулах үедээ шаардлагатай хэсгүүдийг бүрэн хөрвүүлж хадгалаад ашигладаг. Энэ аргыг JIT(Just in time) хөрвүүлэлт гэдэг ба .NET -ийн CLR(Common Language Runtime) нь CIL(Common Intermediate Language) дээр байгаа програмын кодыг ажиллуулахдаа бас JIT хөрвүүлэлтийг хийдэг байна.</p>
+<p>Үнэндээ C, C++ гэх мэт хөрвүүлэгдсэн хэлүүд ч дотроо хэлмэрчээр дамжигдан хөрвөдөг. Гэхдээ хэлмэрч нь хөрвүүлэгчийнхээ салшгүй хэсэг болсон байдаг. Түгээмэл хэрэглэгддэг хэлмэрчтэй хэлүүд гэвэл:</p>
+<ul>
+<li>Java(байткод руу хөрвөөд виртуал машин дотор ажилладаг)</li>
+<li>Lisp(хөрвөгдөөгүй эсвэл хагас хөрвөсөн эсвэл бүрэн хөрвөсөн байдлаар)</li>
+<li>ASP(Вэб хуудас хийдэг скрипт хэл)</li>
+<li>PERL(байткод руу хөрвөөд хэлмэрчлэгдэж ажилладаг)</li>
+<li>BASIC(хэлмэрчтэй ажилладаг)</li>
+<li>PHP(байткод руу хөрвүүлэгдээд хэлмэрчлэгдэж ажилладаг)</li>
+<li>JavaScript(HTML дотор дагалдаж браузераар хэлмэрчлэгддэг)</li>
+</ul>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2006-07-design-patterns/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Дизайны үлгэрүүд(Design patterns)</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2006-06-rss-feed/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Блог дээрээ RSS оруулав</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="/pagefind/pagefind-ui.js"</script>
+    <script>window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+  </body>
+</html>

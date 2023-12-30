@@ -1,9 +1,77 @@
-<!doctype html><html lang=mn><head><meta charset=utf-8><meta name=generator content="Hugo 0.97.3"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=twitter:card content="summary"><meta name=twitter:title content="Coroutine - Ochko"><meta name=twitter:description content="Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.
-Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм."><meta name=twitter:site content="https://ochko.github.io"><meta name=twitter:creator content="L.Ochirkhuyag"><meta name=twitter:image content="https://ochko.github.io/images/koen-stripe.jpg"><meta property="og:locale" content><meta property="og:type" content="article"><meta property="og:title" content="Coroutine - Ochko"><meta property="og:description" content="Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.
-Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм."><meta property="og:url" content="https://ochko.github.io/tech/2007-10-coroutine/"><meta property="og:site_name" content="Ochko"><meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg"><meta name=author content="L.Ochirkhuyag"><meta name=description content="Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.
-Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм."><title>Coroutine :: Ochko</title><link rel=stylesheet href=https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css><link rel=stylesheet href=/katex/katex.min.css media=print onload='this.media="all",this.onload=null'></head><body class=antialiased><div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col"><header class=mb-8><nav class="flex space-x-4" aria-label=Tabs><a href=/><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src=https://ochko.github.io/images/koen-stripe.jpg alt=L.Ochirkhuyag></a>
-<a href=https://ochko.github.io/posts/ class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
-<a href=https://ochko.github.io/tech/ class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a></nav></header><div class="flex-1 pt-10"><article class="prose max-w-none"><h1>Coroutine</h1><time class="text-sm text-right text-gray-600" datetime="2007-10-11 19:42:00 +08">2007-10-11</time><div class=pt-4><p>Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.</p><p>Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм. Мэдээж эхний 2 тоо нь өгөгдөх ёстой.</p><p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,&mldr;</p><p>Дуудах болгонд нэг фибоначийн тоо өгдөг функцийг ruby дээр бичвэл:</p><pre tabindex=0><code>fib = Fiber.new do
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Coroutine - Ochko">
+  <meta name="twitter:description" content="Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.
+Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Coroutine - Ochko">
+  <meta property="og:description" content="Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.
+Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2007-10-coroutine/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.
+Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм.">
+
+  <title>Coroutine :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.460c2314eb8012ef5a2cec67c95f6d3d349d6dcb3d8be5ac13012b5b0afe9960.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+          <div id="search"></div>
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Coroutine</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2007-10-11 19:42:00 &#43;08">2007-10-11</time>
+  <div class="pt-4">
+    <p>Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.</p>
+<p>Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм. Мэдээж эхний 2 тоо нь өгөгдөх ёстой.</p>
+<p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,&hellip;</p>
+<p>Дуудах болгонд нэг фибоначийн тоо өгдөг функцийг ruby дээр бичвэл:</p>
+<pre tabindex="0"><code>fib = Fiber.new do
   x, y = 0, 1
   loop do
     Fiber.yield y
@@ -12,37 +80,103 @@
 end
 
 20.times { puts fib.resume }
-</code></pre><p>Энэ функцыг дуудах болгонд дараагийн фибоначийн тоог буцаах болно. Учир нь resume -ээр дуудах болгонд функц yield гэсэн хэсгээс үргэлжлэн ажилладаг. Дараах хуурмаг C кодыг харья.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> coroutine <span style=color:#a6e22e>Generate_1_2_3</span>() {
-</span></span><span style=display:flex><span>  yield <span style=color:#ae81ff>1</span>;  <span style=color:#75715e>/* Execution begins here upon first call to Generate123 */</span>
-</span></span><span style=display:flex><span>  yield <span style=color:#ae81ff>2</span>;  <span style=color:#75715e>/* execution continues here upon &#34;resume Generate123&#34; */</span>
-</span></span><span style=display:flex><span>  yield <span style=color:#ae81ff>3</span>;  <span style=color:#75715e>/* execution continues here upon second &#34;resume Generate123&#34; */</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>main() {
-</span></span><span style=display:flex><span>  printf(<span style=color:#e6db74>&#34;%d</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>n&#34;</span>, Generate_1_2_3());  <span style=color:#75715e>/* prints &#34;1&#34; */</span>
-</span></span><span style=display:flex><span>  printf(<span style=color:#e6db74>&#34;%d</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>n&#34;</span>, resume Generate_1_2_3()); <span style=color:#75715e>/* prints &#34;2&#34; */</span>
-</span></span><span style=display:flex><span>  printf(<span style=color:#e6db74>&#34;%d</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>n&#34;</span>, resume Generate_1_2_3()); <span style=color:#75715e>/* prints &#34;3&#34; */</span>
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Дээрхи кодноос Coroutine нь олон хаалгатай байшин шиг өөр өөр газраар орж, өөр өөр газраар гарч болох нь харагдаж байгаа байх.</p><p>Coroutine-ийг ихэвчлэн Thread-тэй харьцуулж үздэг. Thread-ээс давуу тал нь гэвэл deadlock, synchronization гэх мэт асуудлууд байхгүй. Гэхдээ мэдээж Thread бол зэрэг ажилладаг учраас түүгээрээ давуу.</p><p>Coroutine нь State machine програмчлах, ямар нэгэн дараалсан зүйлсийг үүсгэх, өмнөх фибоначийн жишээ шиг төгсгөлгүй цуваа зэрэгт хэрэглэгддэг. Заримдаа нилээн хүнд бодлогуудыг coroutine ашиглаад хялбархан шийдэх тохиолдол байдаг. Жишээ нь &ldquo;<a href=http://c2.com/cgi/wiki?SameFringeProblem>Ижил хөвөөний бодлого</a>&rdquo;: Хоёр ширхэг хоёртын модны бүх навчнууд зүүнээсээ баруун хүртлээ харгалзан ижил байвал тэр хоёр модыг ижил хөвөөтэй гэнэ. Өгөгдсөн хоёр модыг ижил хөвөөтэй эсэхийг шалга.</p><p>Энэ бодлогыг Lua хэл дээр шийдсэн нь:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>tree_leaves</span>(tree)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> tree.leaf <span style=color:#66d9ef>then</span>
-</span></span><span style=display:flex><span>   coroutine.yield(tree.leaf)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>
-</span></span><span style=display:flex><span>   tree_leaves(tree.left)
-</span></span><span style=display:flex><span>   tree_leaves(tree.right)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>same_fringe</span>(tree1, tree2)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> iter1 <span style=color:#f92672>=</span> coroutine.wrap(tree_leaves)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> iter2 <span style=color:#f92672>=</span> coroutine.wrap(tree_leaves)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> node <span style=color:#66d9ef>in</span> iter1, tree1 <span style=color:#66d9ef>do</span>
-</span></span><span style=display:flex><span>   <span style=color:#66d9ef>if</span> node <span style=color:#f92672>~=</span> iter2(tree2) <span style=color:#66d9ef>then</span>
-</span></span><span style=display:flex><span>       <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
-</span></span><span style=display:flex><span>   <span style=color:#66d9ef>end</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> iter2() <span style=color:#f92672>==</span> <span style=color:#66d9ef>nil</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
-</span></span></code></pre></div><p>Coroutine ашиглан шийдсэнээр хийгдэх үйлдэл нь O(n) юм. Та энэ бодлогыг өөрийн мэддэг хэл дээр coroutine ашиглалгүй шийдээд хийгдэх үйлдлийг(O) тооцоод үзээрэй.</p><p>Зарим coroutine -г дэмжсэн програмчлалын хэлүүд:</p><ul><li><a href=http://www.ruby-lang.org/>Ruby</a></li><li><a href=http://www.python.org/>Python</a></li><li><a href=http://www.lua.org/>Lua</a></li><li><a href=http://www.perl.org/>Perl</a></li></ul><p>Хэрэгцээтэй хуудсууд:</p><ul><li><p><a href=http://en.wikipedia.org/wiki/Coroutine>Википедиа дээрхи тайлбар</a></p></li><li><p><a href=http://webseitz.fluxent.com/wiki/CoRoutine>Товч тодорхойлолт болон, Coroutine дэмждэг хэлүүдийг жагсаалт</a></p></li><li><p><a href=http://www.chiark.greenend.org.uk/%7Esgtatham/coroutines.html>С хэл дээр хэрхэн хэрэгжүүлж болох тухай</a></p></li><li><p><a href=http://www.akira.ruc.dk/%7Ekeld/research/COROUTINE/>C++ дээр coroutine нэмэх</a></p></li><li><p><a href=http://c2.com/cgi/wiki?CoRoutine>CoRoutine Товч танилцуулга</a></p></li></ul></div></article></div><footer class=mt-12><div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t"><div class="md:mr-12 md:w-1/2"><a href=https://ochko.github.io/tech/2007-10-24-learn-by-doing/ class=block><span class="block font-semibold text-gray-600">Previous</span>
-<span class=block>Хийнгээ сурахуй</span></a></div><div class="md:text-right mt-4 md:mt-0"><a href=https://ochko.github.io/tech/2007-10-ruby-on-rails-ide/ class=block><span class="block font-semibold text-gray-600">Next</span>
-<span class=block>Хамгийн дажгүй Ruby on Rails IDE</span></a></div></div><div class="text-xs text-center">&copy; 2006-2022 L.Ochirkhuyag</div></footer></div><script defer src=/katex/katex.min.js></script>
-<script defer src=/katex/auto-render.min.js onload=renderMathInElement(document.body)></script></body></html>
+</code></pre><p>Энэ функцыг дуудах болгонд дараагийн фибоначийн тоог буцаах болно. Учир нь resume -ээр дуудах болгонд функц yield гэсэн хэсгээс үргэлжлэн ажилладаг. Дараах хуурмаг C кодыг харья.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> coroutine <span style="color:#a6e22e">Generate_1_2_3</span>() {
+</span></span><span style="display:flex;"><span>  yield <span style="color:#ae81ff">1</span>;  <span style="color:#75715e">/* Execution begins here upon first call to Generate123 */</span>
+</span></span><span style="display:flex;"><span>  yield <span style="color:#ae81ff">2</span>;  <span style="color:#75715e">/* execution continues here upon &#34;resume Generate123&#34; */</span>
+</span></span><span style="display:flex;"><span>  yield <span style="color:#ae81ff">3</span>;  <span style="color:#75715e">/* execution continues here upon second &#34;resume Generate123&#34; */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">n&#34;</span>, <span style="color:#a6e22e">Generate_1_2_3</span>());  <span style="color:#75715e">/* prints &#34;1&#34; */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">n&#34;</span>, resume <span style="color:#a6e22e">Generate_1_2_3</span>()); <span style="color:#75715e">/* prints &#34;2&#34; */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">n&#34;</span>, resume <span style="color:#a6e22e">Generate_1_2_3</span>()); <span style="color:#75715e">/* prints &#34;3&#34; */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Дээрхи кодноос Coroutine нь олон хаалгатай байшин шиг өөр өөр газраар орж, өөр өөр газраар гарч болох нь харагдаж байгаа байх.</p>
+<p>Coroutine-ийг ихэвчлэн Thread-тэй харьцуулж үздэг. Thread-ээс давуу тал нь гэвэл deadlock, synchronization гэх мэт асуудлууд байхгүй. Гэхдээ мэдээж Thread бол зэрэг ажилладаг учраас түүгээрээ давуу.</p>
+<p>Coroutine нь State machine програмчлах, ямар нэгэн дараалсан зүйлсийг үүсгэх, өмнөх фибоначийн жишээ шиг төгсгөлгүй цуваа зэрэгт хэрэглэгддэг. Заримдаа нилээн хүнд бодлогуудыг coroutine ашиглаад хялбархан шийдэх тохиолдол байдаг. Жишээ нь &ldquo;<a href="http://c2.com/cgi/wiki?SameFringeProblem">Ижил хөвөөний бодлого</a>&rdquo;: Хоёр ширхэг хоёртын модны бүх навчнууд зүүнээсээ баруун хүртлээ харгалзан ижил байвал тэр хоёр модыг ижил хөвөөтэй гэнэ. Өгөгдсөн хоёр модыг ижил хөвөөтэй эсэхийг шалга.</p>
+<p>Энэ бодлогыг Lua хэл дээр шийдсэн нь:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">tree_leaves</span>(tree)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tree.leaf <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>   coroutine.yield(tree.leaf)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>   tree_leaves(tree.left)
+</span></span><span style="display:flex;"><span>   tree_leaves(tree.right)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">same_fringe</span>(tree1, tree2)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> iter1 <span style="color:#f92672">=</span> coroutine.wrap(tree_leaves)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> iter2 <span style="color:#f92672">=</span> coroutine.wrap(tree_leaves)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> node <span style="color:#66d9ef">in</span> iter1, tree1 <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> node <span style="color:#f92672">~=</span> iter2(tree2) <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> iter2() <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Coroutine ашиглан шийдсэнээр хийгдэх үйлдэл нь O(n) юм. Та энэ бодлогыг өөрийн мэддэг хэл дээр coroutine ашиглалгүй шийдээд хийгдэх үйлдлийг(O) тооцоод үзээрэй.</p>
+<p>Зарим coroutine -г дэмжсэн програмчлалын хэлүүд:</p>
+<ul>
+<li><a href="http://www.ruby-lang.org/">Ruby</a></li>
+<li><a href="http://www.python.org/">Python</a></li>
+<li><a href="http://www.lua.org/">Lua</a></li>
+<li><a href="http://www.perl.org/">Perl</a></li>
+</ul>
+<p>Хэрэгцээтэй хуудсууд:</p>
+<ul>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Coroutine">Википедиа дээрхи тайлбар</a></p>
+</li>
+<li>
+<p><a href="http://webseitz.fluxent.com/wiki/CoRoutine">Товч тодорхойлолт болон, Coroutine дэмждэг хэлүүдийг жагсаалт</a></p>
+</li>
+<li>
+<p><a href="http://www.chiark.greenend.org.uk/%7Esgtatham/coroutines.html">С хэл дээр хэрхэн хэрэгжүүлж болох тухай</a></p>
+</li>
+<li>
+<p><a href="http://www.akira.ruc.dk/%7Ekeld/research/COROUTINE/">C++ дээр coroutine нэмэх</a></p>
+</li>
+<li>
+<p><a href="http://c2.com/cgi/wiki?CoRoutine">CoRoutine Товч танилцуулга</a></p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2007-10-24-learn-by-doing/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Хийнгээ сурахуй</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2007-10-ruby-on-rails-ide/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Хамгийн дажгүй Ruby on Rails IDE</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="/pagefind/pagefind-ui.js"</script>
+    <script>window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+  </body>
+</html>

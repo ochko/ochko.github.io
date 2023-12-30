@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cache on Ochko</title><link>https://ochko.github.io/tags/cache/</link><description>Recent content in cache on Ochko</description><generator>Hugo -- gohugo.io</generator><language>mn</language><lastBuildDate>Mon, 08 Jan 2007 17:13:00 +0800</lastBuildDate><atom:link href="https://ochko.github.io/tags/cache/index.xml" rel="self" type="application/rss+xml"/><item><title>Хаа сайгүй нөөш</title><link>https://ochko.github.io/tech/2007-01-cache/</link><pubDate>Mon, 08 Jan 2007 17:13:00 +0800</pubDate><guid>https://ochko.github.io/tech/2007-01-cache/</guid><description>Cache-ийг Нөөш гээд орчуулчихлаа,
-таарах эсэхийг тунгааж үзнэ биз ээ.
-Компьютер, мэдээллийн технголгийн орчинд хатуумжын түвшнээс авахуулаад сүлжээний түвшин хүртэл хаа сайгүй нөөшийг хэрэглэж хандалт хийх хугацаа болон зарцуулах тооцооллыг хэмнэдэг. Хатуумжын түвшинд гэвэл, CPU-ний чипэнд санах ой руу хамгийн сүүлд хандсан хандалтуудыг хадгалж байдаг нэгдүгээр түвшний нөөш(L1 cache) байдаг. Энэ нөөш нь үндсэн санах ойгоос хандалтын хувьд асар хурдан боловч хэмжээгээр маш бага онцгой төрлийн санах ой юм. CPU-ний гадна талд хоёрдугаар түвшний нөөш(L2 cache) байна.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cache on Ochko</title>
+    <link>https://ochko.github.io/tags/cache/</link>
+    <description>Recent content in cache on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Mon, 08 Jan 2007 17:13:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Хаа сайгүй нөөш</title>
+      <link>https://ochko.github.io/tech/2007-01-cache/</link>
+      <pubDate>Mon, 08 Jan 2007 17:13:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-01-cache/</guid>
+      <description>Cache-ийг Нөөш гээд орчуулчихлаа,&#xA;таарах эсэхийг тунгааж үзнэ биз ээ.&#xA;Компьютер, мэдээллийн технголгийн орчинд хатуумжын түвшнээс авахуулаад сүлжээний түвшин хүртэл хаа сайгүй нөөшийг хэрэглэж хандалт хийх хугацаа болон зарцуулах тооцооллыг хэмнэдэг. Хатуумжын түвшинд гэвэл, CPU-ний чипэнд санах ой руу хамгийн сүүлд хандсан хандалтуудыг хадгалж байдаг нэгдүгээр түвшний нөөш(L1 cache) байдаг. Энэ нөөш нь үндсэн санах ойгоос хандалтын хувьд асар хурдан боловч хэмжээгээр маш бага онцгой төрлийн санах ой юм. CPU-ний гадна талд хоёрдугаар түвшний нөөш(L2 cache) байна.</description>
+    </item>
+  </channel>
+</rss>

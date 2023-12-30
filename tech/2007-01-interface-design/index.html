@@ -1,6 +1,135 @@
-<!doctype html><html lang=mn><head><meta charset=utf-8><meta name=generator content="Hugo 0.97.3"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=twitter:card content="summary"><meta name=twitter:title content="Интэрфэйс дизайн - Ochko"><meta name=twitter:description content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм."><meta name=twitter:site content="https://ochko.github.io"><meta name=twitter:creator content="L.Ochirkhuyag"><meta name=twitter:image content="https://ochko.github.io/images/koen-stripe.jpg"><meta property="og:locale" content><meta property="og:type" content="article"><meta property="og:title" content="Интэрфэйс дизайн - Ochko"><meta property="og:description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм."><meta property="og:url" content="https://ochko.github.io/tech/2007-01-interface-design/"><meta property="og:site_name" content="Ochko"><meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg"><meta name=author content="L.Ochirkhuyag"><meta name=description content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм."><title>Интэрфэйс дизайн :: Ochko</title><link rel=stylesheet href=https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css><link rel=stylesheet href=/katex/katex.min.css media=print onload='this.media="all",this.onload=null'></head><body class=antialiased><div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col"><header class=mb-8><nav class="flex space-x-4" aria-label=Tabs><a href=/><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src=https://ochko.github.io/images/koen-stripe.jpg alt=L.Ochirkhuyag></a>
-<a href=https://ochko.github.io/posts/ class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
-<a href=https://ochko.github.io/tech/ class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a></nav></header><div class="flex-1 pt-10"><article class="prose max-w-none"><h1>Интэрфэйс дизайн</h1><time class="text-sm text-right text-gray-600" datetime="2007-01-04 01:52:00 +08">2007-01-04</time><div class=pt-4><p>Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм. Гаднаас интэрфэйсийг ашиглагч талд дотоод үйлдлүүд болон дотоод бүтэц хамаагүй боловч дотоод мөн чанаруудаа орхигдуулалгүй илэрхийлж чадахуйц байх нь бас чухал.</p><p>Хэрэглэгчийн график интэрфэйсийн хувьд аль болох <a href=http://www.joelonsoftware.com/items/2006/12/09.html>энгийн байлгах</a> хэрэгтэй гэжээ. Гэвч энгийн байлгах гээд цөөхөн функцтэй ядуу програм байж болохгүй. Энгийн мөртлөө олон функцтэй, хэрэглэхэд эвтэйхэн байлгахын тулд програмаа функцүүдийн цуглуулга биш, цогц үйлүүдийн урсгал байхаар загварчлах хэрэгтэй. Үнэхээр сайн дизайн хийж чадвал хэрэглэгч хүссэн зүйлээ бодож хайлгүйгээр шууд зөнгөөрөө л хийчихнэ гэсэн үг. Хэрэглэгчийг олон сонголтуудаас сонгуулж <a href=http://www.managementconsultingnews.com/interviews/krug_interview.php>бодуулах нь сайн шийдэл биш</a> гэнэ. Нэг удаагийн хулганы товшилт, хэрэглэгчийн нэг удаагийн нүдний хөдөлгөөн ч үнэтэй бөгөөд эдгээрийг тооцож чадвал хүн бүхэн вэбийг чинь хэрэглэх дуртай байх болно.</p><p>Хэрэглэгчийн интэрфэйстай холбоотэй вэб холбоосууд:</p><ul><li><p><a href=http://www.killersites.com/articles/articles_dosAndDontsWebDesign.htm>The Do’s and Don’ts of Web Site Design.</a> Вэб дизайн хийхэд юуг хйих, юунаас зайлсхийх хэрэгтэйг заасан байна.</p></li><li><p><a href=http://www.joelonsoftware.com/items/2006/12/09.html>Simplicity</a>. Энгийн байлгана гэдэг дизайныг сайжруулж байгаа боловч дутуу функцтэй байна гэдэг муу дизайнтай байхаас ч дор.</p></li><li><p><a href=http://www.ratz.com/features.html>Web Design Features</a>. Сайн дизайнтай вэб ямар шинж чанаруудтай байдаг, муу дизайнтай вэб ямар шинжтэй байдгийг тоочсон байна.</p></li><li><p><a href=http://www.netmechanic.com/news/vol7/design_no4.htm>Web Site Usability Checklist</a>. Хэрэглэхэд хялбар вэб ямар нөхцөлүүдийг хангаж байх ёстойг шалгах шинжүүрүүдийн жагсаалт.</p></li><li><p><a href=http://psychology.wichita.edu/optimalweb/>Criteria for optimal web design</a>. Зураг хэрхэн ашиглах, хөгшид хүүхдүүдэд хэрэглэхэд хялбар байлгах, интернэйшнл байлгах гэх зэрэг зөндөө зүйлс байна.</p></li><li><p><a href=http://www.joelonsoftware.com/uibook/fog0000000249.html>User Interface Design for Programmers</a>. Яаж төсөөлсөн түүгээр нь ажиллах дизайныг үзүүлж чадвал хэрглэгчдийн сэтгэл ханах болно.</p></li></ul><p>Санал болгох ном:</p><ul><li><a href="http://www.ahfx.net/weblog.php?article=78">Don&rsquo;t Make Me Think: A Common Sense Approach to Web Usability</a></li><li><a href="http://www.amazon.com/Designing-Interfaces-Jenifer-Tidwell/dp/0596008031/ref=pd_sim_dbs_v_5/102-0154307-2965770">Designing Interfaces</a></li></ul><p><a href="http://www.ahfx.net/weblog.php?article=78"><br></a></p></div></article></div><footer class=mt-12><div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t"><div class="md:mr-12 md:w-1/2"><a href=https://ochko.github.io/tech/2007-01-cs-study/ class=block><span class="block font-semibold text-gray-600">Previous</span>
-<span class=block>Компьютерээр сурч буй Оюутнуудад</span></a></div><div class="md:text-right mt-4 md:mt-0"><a href=https://ochko.github.io/tech/2007-01-03-font-install/ class=block><span class="block font-semibold text-gray-600">Next</span>
-<span class=block>Линукс дээр Виндовсын фонт суулгах</span></a></div></div><div class="text-xs text-center">&copy; 2006-2022 L.Ochirkhuyag</div></footer></div><script defer src=/katex/katex.min.js></script>
-<script defer src=/katex/auto-render.min.js onload=renderMathInElement(document.body)></script></body></html>
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Интэрфэйс дизайн - Ochko">
+  <meta name="twitter:description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Интэрфэйс дизайн - Ochko">
+  <meta property="og:description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2007-01-interface-design/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм.">
+
+  <title>Интэрфэйс дизайн :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.460c2314eb8012ef5a2cec67c95f6d3d349d6dcb3d8be5ac13012b5b0afe9960.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+          <div id="search"></div>
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Интэрфэйс дизайн</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2007-01-04 01:52:00 &#43;08">2007-01-04</time>
+  <div class="pt-4">
+    <p>Интэрфэйс бол хоёр тусдаа зүйлийг хооронд нь холбодог эд билээ. Хоёр тал холбогдохын тулд аль аль нь интэрфэйстэй байгаад тэдгээр нь хоорондоо ойлголцдог байх ёстой. Компьютерыг компьютертэй холбодог сүлжээний карт, програмыг програмтай холбодог RMI, CORBA, TCP интэрфэйсүүд, програмыг хүнтэй холбодог график хэрэглэгчийн интэрфэйс, хүнийг комьпютэртэй холбодог хэл яриа хөрвүүлэгч програм, эсвэл хулгана, гар, дэлгэц гэх мэт бүгдээрээ л интэрфэйс юм. Интэрфэйсийн дизайныг хийхэд баримтлах гол зарчим бол гаднаас харахад ойлгомжтой энгийн байлгах юм. Гаднаас интэрфэйсийг ашиглагч талд дотоод үйлдлүүд болон дотоод бүтэц хамаагүй боловч дотоод мөн чанаруудаа орхигдуулалгүй илэрхийлж чадахуйц байх нь бас чухал.</p>
+<p>Хэрэглэгчийн график интэрфэйсийн хувьд аль болох <a href="http://www.joelonsoftware.com/items/2006/12/09.html">энгийн байлгах</a> хэрэгтэй гэжээ. Гэвч энгийн байлгах гээд цөөхөн функцтэй ядуу програм байж болохгүй. Энгийн мөртлөө олон функцтэй, хэрэглэхэд эвтэйхэн байлгахын тулд програмаа функцүүдийн цуглуулга биш, цогц үйлүүдийн урсгал байхаар загварчлах хэрэгтэй. Үнэхээр сайн дизайн хийж чадвал хэрэглэгч хүссэн зүйлээ бодож хайлгүйгээр шууд зөнгөөрөө л хийчихнэ гэсэн үг. Хэрэглэгчийг олон сонголтуудаас сонгуулж <a href="http://www.managementconsultingnews.com/interviews/krug_interview.php">бодуулах нь сайн шийдэл биш</a> гэнэ. Нэг удаагийн хулганы товшилт, хэрэглэгчийн нэг удаагийн нүдний хөдөлгөөн ч үнэтэй бөгөөд эдгээрийг тооцож чадвал хүн бүхэн вэбийг чинь хэрэглэх дуртай байх болно.</p>
+<p>Хэрэглэгчийн интэрфэйстай холбоотэй вэб холбоосууд:</p>
+<ul>
+<li>
+<p><a href="http://www.killersites.com/articles/articles_dosAndDontsWebDesign.htm">The Do’s and Don’ts of Web Site Design.</a> Вэб дизайн хийхэд юуг хйих, юунаас зайлсхийх хэрэгтэйг заасан байна.</p>
+</li>
+<li>
+<p><a href="http://www.joelonsoftware.com/items/2006/12/09.html">Simplicity</a>. Энгийн байлгана гэдэг дизайныг сайжруулж байгаа боловч дутуу функцтэй байна гэдэг муу дизайнтай байхаас ч дор.</p>
+</li>
+<li>
+<p><a href="http://www.ratz.com/features.html">Web Design Features</a>. Сайн дизайнтай вэб ямар шинж чанаруудтай байдаг, муу дизайнтай вэб ямар шинжтэй байдгийг тоочсон байна.</p>
+</li>
+<li>
+<p><a href="http://www.netmechanic.com/news/vol7/design_no4.htm">Web Site Usability Checklist</a>. Хэрэглэхэд хялбар вэб ямар нөхцөлүүдийг хангаж байх ёстойг шалгах шинжүүрүүдийн жагсаалт.</p>
+</li>
+<li>
+<p><a href="http://psychology.wichita.edu/optimalweb/">Criteria for optimal web design</a>. Зураг хэрхэн ашиглах, хөгшид хүүхдүүдэд хэрэглэхэд хялбар байлгах, интернэйшнл байлгах гэх зэрэг зөндөө зүйлс байна.</p>
+</li>
+<li>
+<p><a href="http://www.joelonsoftware.com/uibook/fog0000000249.html">User Interface Design for Programmers</a>. Яаж төсөөлсөн түүгээр нь ажиллах дизайныг үзүүлж чадвал хэрглэгчдийн сэтгэл ханах болно.</p>
+</li>
+</ul>
+<p>Санал болгох ном:</p>
+<ul>
+<li><a href="http://www.ahfx.net/weblog.php?article=78">Don&rsquo;t Make Me Think: A Common Sense Approach to Web Usability</a></li>
+<li><a href="http://www.amazon.com/Designing-Interfaces-Jenifer-Tidwell/dp/0596008031/ref=pd_sim_dbs_v_5/102-0154307-2965770">Designing Interfaces</a></li>
+</ul>
+<p><a href="http://www.ahfx.net/weblog.php?article=78"><br>
+</a></p>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2007-01-cs-study/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Компьютерээр сурч буй Оюутнуудад</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2007-01-03-font-install/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Линукс дээр Виндовсын фонт суулгах</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="/pagefind/pagefind-ui.js"</script>
+    <script>window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+  </body>
+</html>
