@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine translation on Ochko</title>
+    <link>https://ochko.github.io/tags/machine-translation/</link>
+    <description>Recent content in machine translation on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Tue, 30 Jan 2007 18:04:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/machine-translation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Япон-Монгол орчуулагч</title>
+      <link>https://ochko.github.io/tech/2007-01-jp-mn-translation/</link>
+      <pubDate>Tue, 30 Jan 2007 18:04:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-01-jp-mn-translation/</guid>
+      <description>Оршил буюу зорилго Японтой хамтарч ажиллахад тулгардаг хамгийн анхны бэрхшээл бол хэлний гачаал. Япон хэл сурах хэрэгтэй, гэхдээ хүн бүхэн сурах хэрэгтэй юу? Тэгвэл сайн орчуулгын програмтай болчихвол энэ бэрхшээлийн нилээд хэсгийг хөнгөвчилж өгөх нь мэдээж.&#xA;Үндэслэл буюу боломж Та Монгол, Япон хэлүүд хоорондоо нилээд төстэй гэж дуулсан уу? Сүүлийн хэдэн сар жаахан үзсэн чинь үнэхээр төстэй юмнууд байх шиг байна аа. Гэхдээ үсэг нь бол шал өөр. Япон хэлэнд ханз, хирагана, катакана гэж 3 янзын үсэг бий, ханз бол тоо томшгүй олон гэсэн.</description>
+    </item>
+  </channel>
+</rss>

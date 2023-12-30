@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Линукс дээр Виндовсын фонт суулгах - Ochko">
+  <meta name="twitter:description" content="Яагаад Linux дээр Windows фонтууд суулгах хэрэгтэй болдог вэ?
+Зарим вэб хуудсуудыг Виндовсын фонтоор үзэхээр тохируулаад дизайныг хийчихсэн байдаг. Туршлагагүй вэбчидийн хийсэн хуудас фонд солигдоход хэлбэр галбираа алдаж эвгүй харагдах гэх мэт тохиолдол бий. MS Word, MS Powerpoint зэрэг програм дээр бэлдсэн материалыг OpenOffice зэрэг бусад офисын програм дээр нээхэд хэлбэр загвар нь эвдэрч харагдах тохиолдол гардаг. Ийм файлуудыг эвтэйхэн анхны байдлаар үзэхийн тулд анх хийгдсэн фонтууд нь зайлшгүй хэрэгтэй болно.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Линукс дээр Виндовсын фонт суулгах - Ochko">
+  <meta property="og:description" content="Яагаад Linux дээр Windows фонтууд суулгах хэрэгтэй болдог вэ?
+Зарим вэб хуудсуудыг Виндовсын фонтоор үзэхээр тохируулаад дизайныг хийчихсэн байдаг. Туршлагагүй вэбчидийн хийсэн хуудас фонд солигдоход хэлбэр галбираа алдаж эвгүй харагдах гэх мэт тохиолдол бий. MS Word, MS Powerpoint зэрэг програм дээр бэлдсэн материалыг OpenOffice зэрэг бусад офисын програм дээр нээхэд хэлбэр загвар нь эвдэрч харагдах тохиолдол гардаг. Ийм файлуудыг эвтэйхэн анхны байдлаар үзэхийн тулд анх хийгдсэн фонтууд нь зайлшгүй хэрэгтэй болно.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2007-01-03-font-install/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Яагаад Linux дээр Windows фонтууд суулгах хэрэгтэй болдог вэ?
+Зарим вэб хуудсуудыг Виндовсын фонтоор үзэхээр тохируулаад дизайныг хийчихсэн байдаг. Туршлагагүй вэбчидийн хийсэн хуудас фонд солигдоход хэлбэр галбираа алдаж эвгүй харагдах гэх мэт тохиолдол бий. MS Word, MS Powerpoint зэрэг програм дээр бэлдсэн материалыг OpenOffice зэрэг бусад офисын програм дээр нээхэд хэлбэр загвар нь эвдэрч харагдах тохиолдол гардаг. Ийм файлуудыг эвтэйхэн анхны байдлаар үзэхийн тулд анх хийгдсэн фонтууд нь зайлшгүй хэрэгтэй болно.">
+
+  <title>Линукс дээр Виндовсын фонт суулгах :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Линукс дээр Виндовсын фонт суулгах</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2007-01-03 12:00:00 &#43;08">2007-01-03</time>
+  <div class="pt-4">
+    <p>Яагаад Linux дээр Windows фонтууд суулгах хэрэгтэй болдог вэ?</p>
+<ul>
+<li>Зарим вэб хуудсуудыг Виндовсын фонтоор үзэхээр тохируулаад дизайныг
+хийчихсэн байдаг. Туршлагагүй вэбчидийн хийсэн хуудас фонд солигдоход
+хэлбэр галбираа алдаж эвгүй харагдах гэх мэт тохиолдол бий.</li>
+<li>MS Word, MS Powerpoint зэрэг програм дээр бэлдсэн материалыг
+OpenOffice зэрэг бусад офисын програм дээр нээхэд хэлбэр загвар нь
+эвдэрч харагдах тохиолдол гардаг. Ийм файлуудыг эвтэйхэн анхны
+байдлаар үзэхийн тулд анх хийгдсэн фонтууд нь зайлшгүй хэрэгтэй болно.</li>
+<li>Үнэндээ MS Windows фонтууд загвар сайтай, ялангуяа жижигхэнээр харахад
+хамгийн зөв хэлбэртэй харагддаг. Яагаад гэвэл майкрософтод зөвхөн
+фонтны дизайн хийгээд, сайжруулаад сууж байдаг дизайнерууд байдаг
+учраас тэр. Фонтыг үсэг үсгээр нь нарийн шинжиж, хэдэн цэгийн өндөртэй
+байхад яаж харагдуулахав, ямар үсэгний дараа хэдэн цэгийн зайтай гарч
+ирэхэв гэх мэтчихлэн маш сайн тооцож хийсэн байдаг.</li>
+</ul>
+<p>Гэхдээ MS фонтуудыг Linux дээр аваад ашиглахад хууль зөрчих үү?</p>
+<ul>
+<li>Анх MS Internet Explorer-ийн Netscape тэй өрсөлдөж байх үед өөрийнхөө
+бүтээгдэхүүнд бага ч гэсэн давуу тал авчрах зорилгоор майкософтчууд
+өргөн хэрэглэж байсан truetype фонтуудаа хэрэглэхэд үнэгүй
+лизэнзтэйгээр вэб сайт дээрээ татаж авах боломжтой тавьж байсан байна.
+Тэдгээр фонтууд нь:</li>
+</ul>
+<ol>
+<li>Andale Mono</li>
+<li>Arial Black</li>
+<li>Arial (Bold, Italic, Bold Italic)</li>
+<li>Comic Sans MS (Bold)</li>
+<li>Courier New (Bold, Italic, Bold Italic)</li>
+<li>Georgia (Bold, Italic, Bold Italic)</li>
+<li>Impact</li>
+<li>Times New Roman (Bold, Italic, Bold Italic)</li>
+<li>Trebuchet (Bold, Italic, Bold Italic)</li>
+<li>Verdana (Bold, Italic, Bold Italic)</li>
+<li>Webdings</li>
+</ol>
+<p>Харин хэдэн жилийн дараа IE нь Netscape аас илт давуу зах зээл эзлээд ирэнгүүт вэб сайт дээрээ үнэгүй тавьсан байсан фонтуудаа татан буулгасан боловч лизенз нь тэр хэвээрээ үлдсэн учраас одоо болтол эдгээр фонтуудыг үнэгүй ашиглаж болдог юм байна.</p>
+<p>Фонт суулгах хэдэн аргыг тайлбарлая.</p>
+<ol>
+<li><span style="font-weight: bold;">nautilus</span> ашиглаж байгаа бол
+шууд фонтын файлуудыг <span style="font-weight:
+bold;">fonts://</span> байрлалд хуулахад болно.</li>
+<li>хэрэв root эрх байхгүй бол өөрийн <span style="font-weight:
+bold;">home</span> директори дотроо <span style="font-weight:
+bold;">.fonts</span> гэж директори үүсгээд фонтуудыг хуулж болно.</li>
+<li>линуксынхаа багц модуль суулгах системийг ашиглаж болно.</li>
+</ol>
+<p>-debian, ubuntu дээр бол: <span style="font-style: italic;">apt-get install msttcorefonts</span>
+-slackware дээр бол: s<span style="font-style: italic;">lapt-get msttcorefonts</span>
+-бусад линуксууд дээр rpm эсвэл багц файлыг нь татаж аваад суулгаж бас болно.</p>
+<p>Ингээд суулгахаар Виндовсын хамгийн гоё фонт болох <span style="font-weight: bold;">Tahoma</span> энэ багц дотор байхгүй байгаа, учир нь Tahoma бол бүр сүүлд хийгдсэн фонт учраас чөлөөтэй хэрэглэх тэрхүү лицензэд багтдаггүй юм. Иймд та бид дур мэдээд Tahoma гэх мэт дуртай truetype фонтоо дараах аргаар суулгаж бас болно.</p>
+<ol>
+<li>линуксынхаа truetype фонтуудын байгаа байрлалд суулгах
+фонтуудаа(tahoma.ttf, tahomabd.ttf) нэгэн шинэ директори(<span
+style="font-style: italic;">windowsfonts</span>) үүсгээд хуулна.
+ихэвчлэн <span style="font-style:
+italic;">/usr/share/fonts/truetype/</span> дотор байдаг.</li>
+<li>тэр дирэктори дотроо ороод <span style="font-weight:
+bold;">mkfontdir</span> командыг ажиллуулна.</li>
+<li><span style="font-style:
+italic;">/usr/share/fonts/truetype/fonts.cache-1</span> файл дотор
+<span style="font-style: italic;">&quot;windowsfonts&quot; 0 &quot;.dir&quot;</span>
+гэсэн мөр нэмж өгнө(<span style="font-style:
+italic;">&quot;windowsfonts&quot;</span> гэдэг нь шинээр үүсгэсэн
+директорийн нэр).</li>
+<li><span style="font-weight: bold;">fc-cache</span> командыг
+ажиллуулна.</li>
+</ol>
+<p>Тэгээд систэмийнхээ фонтыг Tahoma болгоод, хэмжээг нь 8 дээр тавиад, антиалиасийг идэвхгүй болгочихоод харахаар цонхнууд чинь цэмцийгээд гоё харагдаж байгаа биз.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/posts/images/2007-01-03-font-install-0.png"><img src="/posts/images/2007-01-03-font-install-0.png" alt=""></a></td>
+<td><a href="/posts/images/2007-01-03-font-install-3.png"><img src="/posts/images/2007-01-03-font-install-3.png" alt=""></a></td>
+</tr>
+<tr>
+<td><a href="/posts/images/2007-01-03-font-install-1.png"><img src="/posts/images/2007-01-03-font-install-1.png" alt=""></a></td>
+<td><a href="/posts/images/2007-01-03-font-install-2.png"><img src="/posts/images/2007-01-03-font-install-2.png" alt=""></a></td>
+</tr>
+</tbody>
+</table>
+<p>Холбоос:</p>
+<ul>
+<li><a href="http://linuxhelp.blogspot.com/2005/12/adding-windows-fonts-in-linux.html">Adding Windows Fonts in Linux</a></li>
+</ul>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2007-01-interface-design/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Интэрфэйс дизайн</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2006-12-web-v1-v2-v3/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Web 1.0, 2.0, 3.0</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+  </body>
+</html>

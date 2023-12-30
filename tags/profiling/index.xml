@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>profiling on Ochko</title>
+    <link>https://ochko.github.io/tags/profiling/</link>
+    <description>Recent content in profiling on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Sat, 06 Jan 2007 23:06:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/profiling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Том муужгайг хэржигнүүлэх нь</title>
+      <link>https://ochko.github.io/tech/2007-01-tomcat-profiling/</link>
+      <pubDate>Sat, 06 Jan 2007 23:06:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-01-tomcat-profiling/</guid>
+      <description>Түлхүүр үг: Tomcat profiling&#xA;Том муужгайн(Tomcat) дотор юу болж байгааг тольдон харах гурван аргыг туршиж үзсэнээ танилцуулья. Хоёр нь Eclipse дээрээс харах арга, нэг нь Borland Optimizeit.&#xA;Эхнийх нь Eclipse-ийн TPTP. Хэрхэн тохируулах аргыг энд их ойлгомжтой бичсэн байгаа. Бас ONJava дээр үр дүнгээ ямар ямар байдлаар харж болохыг тайлбарласан байна лээ. Санах ойд үүсч байгаа обьектуудыг харуулдаг, бас статик анализ хийдэг юм байна. Нэг олзуурхууштай нь профайлдах гэж байгаа апликэшнээ сэрвэр дээрээ ажиллаж байхад өөрийнхөө компьютер дээрээс холбогдоод профайлдаж болно.</description>
+    </item>
+  </channel>
+</rss>

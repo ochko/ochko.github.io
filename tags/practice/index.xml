@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>practice on Ochko</title>
+    <link>https://ochko.github.io/tags/practice/</link>
+    <description>Recent content in practice on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Wed, 28 Feb 2007 13:43:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/practice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defensive programming</title>
+      <link>https://ochko.github.io/tech/2007-02-defensive-programming/</link>
+      <pubDate>Wed, 28 Feb 2007 13:43:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-02-defensive-programming/</guid>
+      <description>Programming is one of the most difficult branches of applied mathematics. —Edsger W. Dijkstra Sometimes the problem is to discover what the problem is. —Gordon Glegg Төгс програм гэж байхгүй. —A programmer Жишээ: Та зам гарах гэж байна гэж бод. Өмнө тань явган хүний гарц байна, ногоон гэрэл асаж байна, гэвч нэг машин дөхөн ирж явна, ер зогсох шинжгүй, хурдаа саалгүй ойртсоор. Энэ тохиолдолд та машин гарцан дээр ирээд зогсоно гэж итгээд зам хөндлөн гарах уу?</description>
+    </item>
+    <item>
+      <title>Чулуутай шөл, Буцалсан мэлхий</title>
+      <link>https://ochko.github.io/tech/2007-02-pragmatic/</link>
+      <pubDate>Mon, 12 Feb 2007 11:37:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-02-pragmatic/</guid>
+      <description>&amp;ldquo;Прагматик програмчин&amp;rdquo; номын 1-р бүлгээс&#xA;Дайн дуусч, гэр лүүгээ буцаж явсан гурван цэрэг нилээд өлссөн байлаа. Тэгтэл нэгэн жижиг тосгон дайралджээ. Өлссөн цэргүүдийг тосгоныхон цадтал нь дайлах байх гэж бодсоор тосгон руу очтол хэн ч тэгсэнгүй. Дайны тарчиг цагт тосгоныхон хоол хүнсээр гачигдаж хашраад, байгаа бүхнээ бусдаас нуудаг болсон байлаа.&#xA;Гэвч цэргүүд тогоонд ус хийж буцалгангаа дотор нь гурван чулуу хийчхээд, эгээ л амтат шөл болох гэж байгаа мэт галаа тойрон сууцгаав.</description>
+    </item>
+    <item>
+      <title>Сүм ба Зах</title>
+      <link>https://ochko.github.io/tech/2007-01-cathedral-and-bazaar/</link>
+      <pubDate>Sun, 14 Jan 2007 09:16:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-01-cathedral-and-bazaar/</guid>
+      <description>Given enough eyeballs, all bugs are shallow. —Linus Torvalds Creative brains are a valuable, limited resource. They shouldn&#39;t be wasted on re-inventing the wheel when there are so many fascinating new problems waiting out there. —Eric S. Raymond When you lose interest in a program, your last duty to it is to hand it off to a competent successor. —Eric S. Raymond, Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary Нээлттэй эхийг тууштай өмгөөлөгч Eric S.</description>
+    </item>
+    <item>
+      <title>Багажаар уу, гараар уу?</title>
+      <link>https://ochko.github.io/tech/2006-11-tooling/</link>
+      <pubDate>Wed, 29 Nov 2006 12:05:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2006-11-tooling/</guid>
+      <description>Могой алахад&#xA;Мод нэмэргүй —Зүйр үг Програм хангамжыг хийхэд зайлшгүй хийгдэх ёстой ажлын 95 аас дээш хувь нь гараар хийгддэг гэж болно. Програм хангамж гэдэг маань өөрөө ямар нэг ажлыг автоматжуулах, гар ажиллагааг хялбарчлах үүрэгтэй байдаг болохоор ч тэр байж болох юм.&#xA;Гэхдээ сүүлийн үед програм зохиох ажлыг илт хөнгөвчилж өгсөн багаж хэрэгсэл зөндөө гарч ирж байна. Ингэлээ гээд програмыг програмаар хийж эхэлж байна гэж ойлгож болохгүй юм. Тухайлбал кодыг гаргаж авахын тулд тухайн багажид ямаршуу зүйл хийхийг нь хэлж, зааж өгөх хэрэгтэй.</description>
+    </item>
+    <item>
+      <title>Тестээр хөтлөгдөх хөгжүүлэлт</title>
+      <link>https://ochko.github.io/tech/2006-08-tdd/</link>
+      <pubDate>Fri, 11 Aug 2006 11:33:00 +0900</pubDate>
+      <guid>https://ochko.github.io/tech/2006-08-tdd/</guid>
+      <description>Test driven development&#xA;Тестээр хөтлөгдөх/жолоодогдох/зохицуулагдах хөгжүүлэлт гэдэг маань нэрнээс нь харвал тест дээр тулгуурлаж явагддаг арга болох нь. Agile хөгжүүлэлийн үед хэрэглэгддэг шалгарсан туршлагуудын нэг юм. Хөгжүүлэлт дараалсан маягаар явагдана.&#xA;Ажлын урсгалын дараалал нь:&#xA;1. Тест бичнэ. Энэ нь шинэ тестийг тодорхойлно гэсэн үг. Бичнэ гэдэг нь тухайн тестийг шалгах код ч юмуу скрипт ч юмуу ямар нэг зүйл бий болно гэдгийг илэрхийлж байгаа юм. Хэрэв бичих тест байхгүй бол код маань бүх шаардлагыг хангасан гэсэн үг.</description>
+    </item>
+    <item>
+      <title>Язгуурыг тодруулахуй буюу Refactoring</title>
+      <link>https://ochko.github.io/tech/2006-06-refactoring/</link>
+      <pubDate>Tue, 27 Jun 2006 12:36:00 +0900</pubDate>
+      <guid>https://ochko.github.io/tech/2006-06-refactoring/</guid>
+      <description>Code refactoring Програм хангамжын хөгжүүлэлтэд refactoring гэдэг нэршил нь хийгдчихсэн байгаа эх кодын бүтэцийг програмын гадаад шинж чанарт нөлөө үзүүлэлгүйгээр сайжруулан зохион байгуулахыг хэлдэг. Иймд энэ нь алдаа засах эсвэл шинэ үйлдлүүдийг кодод нэмэхээс арай өөр зүйл юм.&#xA;Хэрвээ програм хангамжын шинж чанарыг өөрчлөн сайжруулахаар зохиомжлоогүй бол түүнд шинэ боломжуудыг нэмж оруулахад хүндрэл үүсдэг. Үүнийг шийдэхийн тулд эсвэл програмыг бүхэлд нь шинээр хийх эсвэл тухайн шинэ шинж чанарыг нэмэхэд саад учруулж байгаа хэсгийг өөрчлөх болдог.</description>
+    </item>
+    <item>
+      <title>Дасан зохицохуй</title>
+      <link>https://ochko.github.io/tech/2006-06-adapt/</link>
+      <pubDate>Mon, 05 Jun 2006 12:57:00 +0900</pubDate>
+      <guid>https://ochko.github.io/tech/2006-06-adapt/</guid>
+      <description>Програм хангамжын хөгжүүлэгч хүнд дасан зохицох чадвар гэдэг чухал бололтой. Өнөөгийн хурдтай хөгжиж байгаа мэдээллийн технологийн салбарт тогтож үлдэхийн тулд шинэ програм хангамж арга хэрэгсэлээр байнга сэлбэгдэж байх нь өөрчлөлт биш хэвийн л байдал гэлтэй.&#xA;Ялангуяа гадаад аутсоорс хийх үед энэ чанар бүр ч их шаардагддаг юм байна. Захиалагчийг хаанд өргөмжилж тэдний шаардсан хүссэнийг дээд зэргээр хийж өгөхийн тулд өөрсдийн ажлын дотоод арга барил болон хийж заншсан баримт бичгүүдээ ч өөр өөр арга барил, өөр өөр хэлбэр загвараар хийх шаардлагатай болдог.</description>
+    </item>
+    <item>
+      <title>Хөгжүүлэгч болох зам харгуй</title>
+      <link>https://ochko.github.io/tech/2006-05-system-engineer-roadmap/</link>
+      <pubDate>Wed, 24 May 2006 10:51:00 +0900</pubDate>
+      <guid>https://ochko.github.io/tech/2006-05-system-engineer-roadmap/</guid>
+      <description>Roadmap to System Engineer Хөгжүүлэгч гэж би энд програм хангамжийн хөгжүүлэгчийг(software developer) ярьж байна. Саяхан миний нэг шавь хөгжүүлэгч болоход ямар номнуудыг заавал уншсан байх хэрэгтэй вэ, ер нь ямар замаар явахыг зааж өгөөч гэж хүссэн юм. Хэдийвээр би өөрөө тийм мундаг хөгжүүлэгч буюу системийн архитект биш ч гэсэн өөрийн хэмжээнд шавьдаа хэлсэн хариултаа энэ асуултын хариуг мөн адил сонирхож байгаа дүү нартаа зориулан арай жаахан сийрүүлээд бичихээр шийдлээ.&#xA;Ирсэн захидал Оройн мэндийг хүргэе.</description>
+    </item>
+  </channel>
+</rss>

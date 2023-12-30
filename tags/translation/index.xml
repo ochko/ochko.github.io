@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>translation on Ochko</title>
+    <link>https://ochko.github.io/tags/translation/</link>
+    <description>Recent content in translation on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Wed, 21 Feb 2007 13:16:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/translation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Галт хана уу?, Галын хана уу?</title>
+      <link>https://ochko.github.io/tech/2007-02-firewall/</link>
+      <pubDate>Wed, 21 Feb 2007 13:16:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-02-firewall/</guid>
+      <description>Сүлжээг гадны халдлагаас хамгаалдаг firewall гэдэг зүйл буй. Үүнийг монгол хэлнээ галт хана гэж орчуулж хэрэглээд байдаг. Би ч мөн тэгж орчуулах нь зөв гэж боддог байлаа.&#xA;Барилга барихад гал нэвтрүүлдэггүй хана буюу firewall гэдэг зүйл байдаг ба тэр нь нэг өрөөнд гарсан галыг бусад өрөө рүү нэвтрэхгүй байлгах үүрэгтэй байдаг юм гэнэ. Галын хана муу эсвэл гал хэт их хүчтэй үед нэг өрөөнд гарсан гал бусад өрөө рүү дамжиж барилга тэр чигээрээ шатдаг байна.</description>
+    </item>
+  </channel>
+</rss>

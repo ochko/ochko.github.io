@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>social networks on Ochko</title>
+    <link>https://ochko.github.io/tags/social-networks/</link>
+    <description>Recent content in social networks on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Sat, 08 Jan 2011 13:48:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/social-networks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Twitter, Buzz, FB,...</title>
+      <link>https://ochko.github.io/tech/2011-01-twitter-buzz-fb/</link>
+      <pubDate>Sat, 08 Jan 2011 13:48:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2011-01-twitter-buzz-fb/</guid>
+      <description>Нэг хэсэг хугацаанд Twitter, Buzz, FB зэргийг идэвхгүйгээр хэрэглэхээр шийдлээ.&#xA;Идэвхгүй гэдэг нь зөвхөн өөрт хандсан зүйлсэд хариу үйлдэл хийх бөгөөд зөвхөн мэдээлэх зайлшгүй шаардлагатай үед л шинээр пост хийх байх.&#xA;Social net идэвхтэйгээр хэрэглэж эхлэснээс хойш хувийн бүтээмж үлэмж буурсныг ажигласан учраас ингэж шийдлээ.</description>
+    </item>
+  </channel>
+</rss>

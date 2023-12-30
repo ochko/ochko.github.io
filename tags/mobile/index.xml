@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile on Ochko</title>
+    <link>https://ochko.github.io/tags/mobile/</link>
+    <description>Recent content in mobile on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Sun, 05 Nov 2006 19:10:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Гар утасны програм хангамж</title>
+      <link>https://ochko.github.io/tech/2006-11-modile-app/</link>
+      <pubDate>Sun, 05 Nov 2006 19:10:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2006-11-modile-app/</guid>
+      <description>Саявтархан нэг японы програм хангамж хөгжүүлэлтийн жижгэвтэр компаниар явсан танин мэдэх аялалд оролцсон юм. Бага компани боловч сүрхий нарийн мэргэшсэн ажил хийдэг гэж байв. Гар утасны програм хангамж хөгжүүлдэг гэнээ. Гар утасны хатуумж(hardware) дээр үйлдлийн систем нь үйлдвэрээсээ ирнэ, түүн дээрх апликэшнүүдийг нь хийдэг юм байх. Захиалагч талаас ямар ямар апликэшн хийлгэх захиалгаа өгнө. Хөгжүүлэлтийн баг програм хангамжыг боловсруулаад чанарыг нь бас хангадаг гэнэ. Аялан явах үед нарийн ширийн юм үзүүлж харуулсангүй, тест хийж байгаа байдал гээд хэдэн хүн сууж байгаа өрөөнд оруулж харуулав.</description>
+    </item>
+  </channel>
+</rss>

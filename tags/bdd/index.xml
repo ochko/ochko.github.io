@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BDD on Ochko</title>
+    <link>https://ochko.github.io/tags/bdd/</link>
+    <description>Recent content in BDD on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Thu, 07 May 2009 11:37:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/bdd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BDD on Rails: Cucumber, Webrat &amp; Factory girl</title>
+      <link>https://ochko.github.io/tech/2009-05-bdd/</link>
+      <pubDate>Thu, 07 May 2009 11:37:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2009-05-bdd/</guid>
+      <description>Сүүлийн үед BDD(Behavior Driven Development) их таалагдаж байна аа. Урьд нь TDD(Test Driven Development)-ийг хэрэглэх гээд нэг л болж өгдөггүй байлаа. TDD бол урьдаар тестээ зохиочихоод кодоо бичдэг. Тест бичихийн тулд систем яаж ажиллах ёстойг дотроо ч юмуу, өөр нэг газар хийсэн/бичсэн байх болдог. Ингэхээр тест бичихийн өмнө баахан дизайн хийх/бодох шаардлага гарчихаад байдаг л даа. Харин BDD болохоор систем гаднаасаа хэрэглэгчид яаж харагдах, яаж аашлаж авирлахыг(behave) эхлэж бичээд, түүн дээрээ үндэслээд л TDD хийгээд улаан ногоон гэрэл анивчуулаад явчихна гэсэн үг.</description>
+    </item>
+  </channel>
+</rss>

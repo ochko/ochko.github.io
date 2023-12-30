@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Web application framework - Ochko">
+  <meta name="twitter:description" content="Ялаа алахад үхэр буу хэрэггүй... —Зүйр үг Сүүлийн үед өргөн хэрэглэгдээд байгаа вэб апликэшн хөгжүүлэлтийн фрэймворкуудын талаар.
+Spring-ийн талаар дуулсан л байх, алдартай фрэймворк. Гайгүй сайн гэсэн техникүүдийг хэрэглээд, нээлттэй эх бүхий мундаг мундаг хэрэгсэлүүдийг угсраад хийчихсэн гэж байгаа. Онцолвол: MVC &#43; AOP &#43; IoC &#43; DAO &#43; iBATIS &#43; Hibernate &#43; Struts &#43; Webwork &#43; JTA &#43; EJB &#43; &amp;hellip;. = Spring. Гэхдээ онцлох ёстой зүйлс нь:
+AOP(Aspect Oriented Programming) IoC(Inversion of Control) буюу DI(Dependency Injection) гэдэг 2 ойлголт юм.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Web application framework - Ochko">
+  <meta property="og:description" content="Ялаа алахад үхэр буу хэрэггүй... —Зүйр үг Сүүлийн үед өргөн хэрэглэгдээд байгаа вэб апликэшн хөгжүүлэлтийн фрэймворкуудын талаар.
+Spring-ийн талаар дуулсан л байх, алдартай фрэймворк. Гайгүй сайн гэсэн техникүүдийг хэрэглээд, нээлттэй эх бүхий мундаг мундаг хэрэгсэлүүдийг угсраад хийчихсэн гэж байгаа. Онцолвол: MVC &#43; AOP &#43; IoC &#43; DAO &#43; iBATIS &#43; Hibernate &#43; Struts &#43; Webwork &#43; JTA &#43; EJB &#43; &amp;hellip;. = Spring. Гэхдээ онцлох ёстой зүйлс нь:
+AOP(Aspect Oriented Programming) IoC(Inversion of Control) буюу DI(Dependency Injection) гэдэг 2 ойлголт юм.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2006-12-23-web-framework/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Ялаа алахад үхэр буу хэрэггүй... —Зүйр үг Сүүлийн үед өргөн хэрэглэгдээд байгаа вэб апликэшн хөгжүүлэлтийн фрэймворкуудын талаар.
+Spring-ийн талаар дуулсан л байх, алдартай фрэймворк. Гайгүй сайн гэсэн техникүүдийг хэрэглээд, нээлттэй эх бүхий мундаг мундаг хэрэгсэлүүдийг угсраад хийчихсэн гэж байгаа. Онцолвол: MVC &#43; AOP &#43; IoC &#43; DAO &#43; iBATIS &#43; Hibernate &#43; Struts &#43; Webwork &#43; JTA &#43; EJB &#43; &amp;hellip;. = Spring. Гэхдээ онцлох ёстой зүйлс нь:
+AOP(Aspect Oriented Programming) IoC(Inversion of Control) буюу DI(Dependency Injection) гэдэг 2 ойлголт юм.">
+
+  <title>Web application framework :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Web application framework</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2006-12-23 11:14:00 &#43;08">2006-12-23</time>
+  <div class="pt-4">
+    <div class="flex justify-between mt-2 mb-3 mr-4">
+  <div></div>
+  <div class="max-w-sm text-sm font-serif">
+    <div class="text-black">
+Ялаа алахад үхэр буу хэрэггүй...
+</div>
+    <div class="italic text-right pt-1">—Зүйр үг</div>
+  </div>
+</div>
+<p>Сүүлийн үед өргөн хэрэглэгдээд байгаа вэб апликэшн хөгжүүлэлтийн фрэймворкуудын талаар.</p>
+<p>Spring-ийн талаар дуулсан л байх, алдартай фрэймворк. Гайгүй сайн гэсэн техникүүдийг хэрэглээд, нээлттэй эх бүхий мундаг мундаг хэрэгсэлүүдийг угсраад хийчихсэн гэж байгаа. Онцолвол: <a href="http://en.wikipedia.org/wiki/Model-view-controller">MVC</a> + <a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming">AOP</a> + <a href="http://en.wikipedia.org/wiki/Inversion_of_Control">IoC</a> + <a href="http://en.wikipedia.org/wiki/Data_Access_Object">DAO</a> + <a href="http://ibatis.apache.org/">iBATIS</a> + <a href="http://www.hibernate.org/">Hibernate</a> + <a href="http://struts.apache.org/">Struts</a> + <a href="http://www.opensymphony.com/webwork/">Webwork</a> + <a href="http://java.sun.com/products/jta/">JTA</a> + <a href="http://en.wikipedia.org/wiki/EJB">EJB</a> + &hellip;. = <a href="http://www.springframework.org/">Spring</a>. Гэхдээ онцлох ёстой зүйлс нь:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AOP">AOP(Aspect Oriented Programming)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IoC">IoC(Inversion of Control)</a> буюу <a href="http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html">DI(Dependency Injection)</a></li>
+</ul>
+<p>гэдэг 2 ойлголт юм. AOP ийг хэрэглэснээр програмынхаа кодыг өөрчлөлгүйгээр лог хэвлэх, оролт гаралтыг шүүх, гэх мэт шинж төрхүүдийг нэмэх боломжтой бөгөөд, IoC ийн дэмжлэгтэйгээр програм илүү динамик болдог. Тухайлбал нэг хөгжүүлэгч бизнес логикоо жирийн <a href="http://en.wikipedia.org/wiki/POJO">POJO</a> байдлаар хийж байхад нөгөө нь вебээ яаж ажиллах урсгал, удирдлагын хэсэг зэргийг хийж байгаад нийлүүлэх үедээ аль нь ч бичсэн кодоо өөрчлөхгүйгээр тохиргооны файлд зааж өгөөд л болоо. Эвтэйхэн сонсдохгүй байна гэжүү. Тэгээд бас WebLogic, Tomcat, Resin, JBoss, Jetty, Geronimo, WebSphere гээд мэдэх мэдэхгүй апликэшн сэрвэрүүдтэй бүгдээрэнтэй зохицож ажиллаж чадна гэнэ лээ. <a href="http://en.wikipedia.org/wiki/J2EE">J2EE</a> -г бүрэн дэмжих учир EJB хийдэг хүмүүс хэрэглэж болох нь байна. Spring ийн Bean нь EJB ээс хамаагүй амархан, нэг EJB хийх гэж баахан хол ойрын интэрфэйс, араг яс энэ тэр үүсгээд энд тэнд тохиргоо хийгээд явж өгдөг санагдаж байна. Spring дээр бол POJO байхад бараг болчихно, тохиргоо нь ч бага. Нэмж хэлэхэд .NET ийн салаа хувилбар бас байдаг.</p>
+<p>Одоо өөр нэг фрэймворкыг авч үзье. Энэ фрэймворкын нэр бас л S-ээр эхэлсэн бөгөөд 6-н үсэгтэй, япончууд маш их хэрэглэдэг нээлттэй эх бүхий бүтээл. Миний бодлоор бол Spring ийг л дуурайсан шиг санагдсан. Бас л <a href="http://en.wikipedia.org/wiki/AOP">AOP</a> + DI + <a href="http://en.wikipedia.org/wiki/Data_Transfer_Object">DTO</a> + <a href="http://s2dao.seasar.org/en/index.html">S2DAO</a> + <a href="http://s2jsf.seasar.org/en/">S2JSF</a> + <a href="http://s2struts.seasar.org/en/">S2Struts</a> + <a href="http://www.seasar.org/en/s2tapestry.html">S2Tapestry</a> + <a href="http://www.seasar.org/en/s2flex/index.html">S2Flex</a> + <a href="http://s2rmi.seasar.org/en/">S2RMI</a> + <a href="http://s2axis.seasar.org/en/">S2Axis</a>+&hellip; <a href="http://www.seasar.org/en/index.html">Seasar</a>. Нөгөө мундаг нээлттэй эхийн хэрэгсэлүүдийг нэрнийх нь урд S2 залгаад жаахан жаахан өөрчлөөд л өөрийн болгоод байгаа юм байна лээ.</p>
+<p>Spring хөгжүүлэгчдийн философи нь бэлэн байгаа сайн хэрэгсэлүүдийг тэр чигээр нь хэрэглэх. Ингэхийн ашигтай тал нь тэдгээр хэрэгслүүдийг анхны зохиогчид нь хөгжүүлээд сайжруулаад явна, харин Spring -ийн хөгжүүлэгчид Spring -ээ л хөгжүүлээд сайжруулаад явна. Гэтэл Seasar болохоор тэдгээр хэрэгслүүдийг авч ашиглахдаа нэрийг нь хүртэл өөрчлөөд өөрсдийн хэрэгцээнд нийцүүлж тусгайлан хөгжүүлж байгаа юм. Энэ нь Spring-тэй харьцуулахад жаахан дутагдалтай тал байгаа боловч Seasar-ийн гол зорилго болгосон зүйл нь:</p>
+<ul>
+<li>Тохиргооны файлууд сөнөтүгэй</li>
+<li>DI -ийг хэрэглэхэд амархан байх ёстой</li>
+</ul>
+<p>гэсэн хоёр зүйл юм. Spring дээр тал талаас авчирсан хэрэгслүүдийг нийлүүлэхийн тулд тохиргооны файлыг овоо ихээр хэрэглэдэг бол Seasar дээр үнэхээр тохиргооны файл гэдэг нүдний гэм. Ашиглахад үнэхээр хялбар. DI хийхэд ч тохиргоо маш бага хийгддэг, Spring -ээс лав хялбар, EJB -ээс бол бүр хялбархан. Би лав EJB хэрэглэж сурах гээд долоо хоног оролдоод энэнээс арай өөрөөр байж болоогүй л юм байх даа гэж бодоод орхисон, дараа нь Spring -ийг хэрэглэж сурах гэсэн чинь баахан тохиргооны файл засах хэрэгтэй болоод бас л орхичихсон. Гэхдээ тэр үед бодит хэрэгцээ гараагүй байсан болохоор хүчлээгүй ч байх. Харин Seasar амархан ч юм, тэгээд хэрэглэх шаардлага нь ч гарсан болохоор дор нь эзэмшсэн дээ.</p>
+<p>Саяхан <a href="/2006/12/blog-post.html">Anonymous </a>аас ямар технологи их ашиглагдаж байна гэж сурагласан байсан. Энд бол том хэмжээний системийг хөгжүүлэхэд WebLogic , WebSphere гэх мэт J2EE апликэшн сэрвэрүүдийг Oracle өгөгдлийн сантай хамт ашиглах нь элбэг. Дунд болон жижиг хэмжээний системүүдийн хувьд Seasar, Tomcat, Struts, MySQL, PostgreSQL гээд нээлттэй эхтэй бүтээлүүдийг ихээр хэрэглэдэг ч заримдаа том системүүд ч эдгээр технологиуд дээр хийгдэх нь олширч байгаа. Харин том системүүдийн хувьд өгөгдлийн сан нь Oracle голчлон хэрэглэгддэг.</p>
+<p>За ингээд эцэст нь сүүлийн үед нилээд шуугиж байгаа <a href="http://rubyonrails.org/">Rails</a> фрэймворкын талаар дурдахгүй өнгөрч чадахгүй нь. Энэ фрэймворк дээр хөгжүүлэгчийн бүтээмж харьцангуй өндөр <a href="http://onstartups.com/Home/tabid/3339/articleType/ArticleView/articleId/625/Default.aspx">байхын</a> дээр, сүүлийн үед моод болоод буй <a href="http://ruby-lang.org/en">Ruby хэл</a> дээр тулгуурласан вэб хөгжүүлэлтийн хэрэглэл бөгөөд, бас л моодонд ороод байгаа <a href="http://www.adaptivepath.com/publications/essays/archives/000385.php">AJAX</a> апликэшн хийхэд зориулагдаж бүрэн тоноглогдсон ажээ. Завтай бол <a href="http://www-128.ibm.com/developerworks/xml/library/x-introajaxrails/">ороод</a> үзээрэй.</p>
+<p>Ингээд, миний сонголт бол : <a href="http://www.seasar.org/en/index.html">Seasar</a>, <a href="http://rubyonrails.org/">Rails</a></p>
+<p><strong>Холбоос:</strong></p>
+<ul>
+<li><a href="http://www.seasar.org/en/index.html">Seasar - DI Container with AOP</a></li>
+<li><a href="http://www.springframework.org/">Spring Framework</a></li>
+<li><a href="http://rubyonrails.org/">Ruby on Rails</a></li>
+<li><a href="http://onstartups.com/Home/tabid/3339/articleType/ArticleView/articleId/625/Default.aspx">RoR -ийг сонгохын учир</a></li>
+</ul>
+<p><strong>Апликэшн сэрвэрүүд:</strong></p>
+<ul>
+<li><a href="http://tomcat.apache.org/">Apache Tomcat</a></li>
+<li><a href="http://www.jboss.org/products/jbossas">JBoss Application Server</a></li>
+<li><a href="https://glassfish.dev.java.net/">GlassFish</a></li>
+<li><a href="http://jonas.objectweb.org/">JOnAS</a></li>
+<li><a href="http://www.caucho.com/">Resin</a></li>
+<li><a href="http://geronimo.apache.org/">Apache Geronimo</a></li>
+</ul>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2006-12-one-program/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Ядаж ганц програм...</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2006-12-unix-vs-windows/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Unix ба Windows</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+  </body>
+</html>

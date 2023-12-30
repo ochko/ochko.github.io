@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Ochko</title>
+    <link>https://ochko.github.io/tags/blog/</link>
+    <description>Recent content in blog on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Wed, 10 Oct 2007 19:20:00 -0700</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Хүүгийн блог</title>
+      <link>https://ochko.github.io/posts/2007-10-sons-blog/</link>
+      <pubDate>Wed, 10 Oct 2007 19:20:00 -0700</pubDate>
+      <guid>https://ochko.github.io/posts/2007-10-sons-blog/</guid>
+      <description>Би хүүгийнхээ тухай зүйлсийг тусд нь бичихээр шийдсэн юм. Өөрөө бичиж чаддаг болохоороо үргэлжлүүлээд хөтлөнө биз, одоохондоо аав ээж нь л бичиж байгаа. Гэхдээ аль болох хүүгийнхээ нүдээр харахыг хичээх болно. Миний хөөрхөн хүүгийн блог.</description>
+    </item>
+  </channel>
+</rss>

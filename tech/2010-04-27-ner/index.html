@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Хүүхдэд нэр хайж байна уу? - Ochko">
+  <meta name="twitter:description" content="Шинэ хүндээ нэр хайж байна уу? Тэгвэл Нэр.query.mn дээрээс үзээрэй. Нэрнээс хайж, үсгийн дарааллаар шүүрдэж эсвэл ангилалаар харж болно. Ойр дотныхноосоо саналыг нь авч цуглуулсан нэрнээсээ санамсаргүйгээр сугалж ч болно. Одоогоор ихэнх Монгол нэрс бүртгэгдсэн байгаа боловч зарим сүүлийн үеийн нэрс дутуу орсон, ангилал бүрэн хийгдээгүй, мөн нэрийн тайлбар сэлт ерөөсөө хийгдээгүй байгаа. Гэвч тайлбар бичих болон ангилал хийх боломж хэн бүхэнд нээлттэй байгаа. Та ороод үзээрэй, таньдаг хүмүүсээс чинь хэн нэг нь хүүхэдтэй болсон бол энэ сайтыг заавал хэлж өгөөрэй.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Хүүхдэд нэр хайж байна уу? - Ochko">
+  <meta property="og:description" content="Шинэ хүндээ нэр хайж байна уу? Тэгвэл Нэр.query.mn дээрээс үзээрэй. Нэрнээс хайж, үсгийн дарааллаар шүүрдэж эсвэл ангилалаар харж болно. Ойр дотныхноосоо саналыг нь авч цуглуулсан нэрнээсээ санамсаргүйгээр сугалж ч болно. Одоогоор ихэнх Монгол нэрс бүртгэгдсэн байгаа боловч зарим сүүлийн үеийн нэрс дутуу орсон, ангилал бүрэн хийгдээгүй, мөн нэрийн тайлбар сэлт ерөөсөө хийгдээгүй байгаа. Гэвч тайлбар бичих болон ангилал хийх боломж хэн бүхэнд нээлттэй байгаа. Та ороод үзээрэй, таньдаг хүмүүсээс чинь хэн нэг нь хүүхэдтэй болсон бол энэ сайтыг заавал хэлж өгөөрэй.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2010-04-27-ner/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Шинэ хүндээ нэр хайж байна уу? Тэгвэл Нэр.query.mn дээрээс үзээрэй. Нэрнээс хайж, үсгийн дарааллаар шүүрдэж эсвэл ангилалаар харж болно. Ойр дотныхноосоо саналыг нь авч цуглуулсан нэрнээсээ санамсаргүйгээр сугалж ч болно. Одоогоор ихэнх Монгол нэрс бүртгэгдсэн байгаа боловч зарим сүүлийн үеийн нэрс дутуу орсон, ангилал бүрэн хийгдээгүй, мөн нэрийн тайлбар сэлт ерөөсөө хийгдээгүй байгаа. Гэвч тайлбар бичих болон ангилал хийх боломж хэн бүхэнд нээлттэй байгаа. Та ороод үзээрэй, таньдаг хүмүүсээс чинь хэн нэг нь хүүхэдтэй болсон бол энэ сайтыг заавал хэлж өгөөрэй.">
+
+  <title>Хүүхдэд нэр хайж байна уу? :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Хүүхдэд нэр хайж байна уу?</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2010-04-27 15:24:00 &#43;08">2010-04-27</time>
+  <div class="pt-4">
+    <p>Шинэ хүндээ нэр хайж байна уу? Тэгвэл <a href="http://ner.query.mn/">Нэр.query.mn</a> дээрээс үзээрэй. Нэрнээс хайж, үсгийн дарааллаар шүүрдэж эсвэл ангилалаар харж болно. Ойр дотныхноосоо саналыг нь авч цуглуулсан нэрнээсээ санамсаргүйгээр сугалж ч болно. Одоогоор ихэнх Монгол нэрс бүртгэгдсэн байгаа боловч зарим сүүлийн үеийн нэрс дутуу орсон, ангилал бүрэн хийгдээгүй, мөн нэрийн тайлбар сэлт ерөөсөө хийгдээгүй байгаа. Гэвч тайлбар бичих болон ангилал хийх боломж хэн бүхэнд нээлттэй байгаа. Та ороод үзээрэй, таньдаг хүмүүсээс чинь хэн нэг нь хүүхэдтэй болсон бол энэ сайтыг заавал хэлж өгөөрэй. Монголын үрс маш олон болтугай!</p>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2010-05-31-codermn/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Coder.mn шинэчлэгдлээ</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2010-03-28-tokyo-it/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Санаа нийлвэл явдал нийлнэ</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computer on Ochko</title>
+    <link>https://ochko.github.io/tags/computer/</link>
+    <description>Recent content in computer on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Thu, 04 Jan 2007 04:41:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/computer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Компьютерээр сурч буй Оюутнуудад</title>
+      <link>https://ochko.github.io/tech/2007-01-cs-study/</link>
+      <pubDate>Thu, 04 Jan 2007 04:41:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-01-cs-study/</guid>
+      <description>Танд компьютэрийн чиглэлээр сурах болсон өөрийн зорилго байгаа л байх, тухайлбал, -Програм зохиодог хүн болно, надад програм бичих таалагддаг, эсвэл, -Програм хангамжын том компаний захирал болно, эсвэл, -Мундаг мэргэжилтэн болно, жирийн програм бичигч байхыг хүсэхгүй гэх мэт ямар ч бодолтой бай, програм хангамжтай л холбоотой зүйл хийж амьдаръя гэж байгаа бол энэ зөвлөгөө өөрт чинь хамаатай. IT-ийн том компаний захирлууд ихэнх нь техникийн хүмүүс байдаг. Дэлхийн хамгийн баян хүн програмист гэдгийг мэднэ биз дээ, тэгэхээр компьютэрээр сурах нь баяжихад хамгийн ойр зам ч байх болох юм.</description>
+    </item>
+  </channel>
+</rss>

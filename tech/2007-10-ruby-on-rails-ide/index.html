@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Хамгийн дажгүй Ruby on Rails IDE - Ochko">
+  <meta name="twitter:description" content="Сүүлийн үед Ruby on Rails(RoR) дээр жижиг сажиг юм хийж үзээд, амтанд нь нилээн орчихлоо. Тэгээд RoR ийн хамгийн дажгүй IDE юу байнав гээд хайсан юм. Хамгийн дажгүй нь TextMate гэж засварлагч дээр Rails Bundle гэдгийг суулгаад янзын гэж байна. Тэр золиг нь даан ч үнэтэй, бас Mac дээр ажилладаг эд юм байна. Ер нь RoR дээр юм хийдэг хүмүүс Mac их ашигладаг бололтой юм билээ, яагаад ч юм бүү мэд, мэддэг хүн байвал тайлбарлаж өгөөрэй.">
+  <meta name="twitter:site" content="https://ochko.github.io">
+  <meta name="twitter:creator" content="L.Ochirkhuyag">
+  <meta name="twitter:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  
+  <meta property="og:locale" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Хамгийн дажгүй Ruby on Rails IDE - Ochko">
+  <meta property="og:description" content="Сүүлийн үед Ruby on Rails(RoR) дээр жижиг сажиг юм хийж үзээд, амтанд нь нилээн орчихлоо. Тэгээд RoR ийн хамгийн дажгүй IDE юу байнав гээд хайсан юм. Хамгийн дажгүй нь TextMate гэж засварлагч дээр Rails Bundle гэдгийг суулгаад янзын гэж байна. Тэр золиг нь даан ч үнэтэй, бас Mac дээр ажилладаг эд юм байна. Ер нь RoR дээр юм хийдэг хүмүүс Mac их ашигладаг бололтой юм билээ, яагаад ч юм бүү мэд, мэддэг хүн байвал тайлбарлаж өгөөрэй.">
+  <meta property="og:url" content="https://ochko.github.io/tech/2007-10-ruby-on-rails-ide/">
+  <meta property="og:site_name" content="Ochko">
+  <meta property="og:image" content="https://ochko.github.io/images/koen-stripe.jpg">
+
+  <meta name="author" content="L.Ochirkhuyag">
+  <meta name="description" content="Сүүлийн үед Ruby on Rails(RoR) дээр жижиг сажиг юм хийж үзээд, амтанд нь нилээн орчихлоо. Тэгээд RoR ийн хамгийн дажгүй IDE юу байнав гээд хайсан юм. Хамгийн дажгүй нь TextMate гэж засварлагч дээр Rails Bundle гэдгийг суулгаад янзын гэж байна. Тэр золиг нь даан ч үнэтэй, бас Mac дээр ажилладаг эд юм байна. Ер нь RoR дээр юм хийдэг хүмүүс Mac их ашигладаг бололтой юм билээ, яагаад ч юм бүү мэд, мэддэг хүн байвал тайлбарлаж өгөөрэй.">
+
+  <title>Хамгийн дажгүй Ruby on Rails IDE :: Ochko</title>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="https://ochko.github.io/main.ba77102aadc0da1e5595bb0f37d782a1cc4cc908013206d15ea55e9080a93054.css">
+
+  <link rel="stylesheet" href="/katex/katex.min.css" media="print" onload="this.media='all';this.onload=null;">
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+
+
+  <body class="antialiased">
+    <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
+      
+      <header class="mb-8">
+        <nav class="flex space-x-4" aria-label="Tabs">
+          <a href="/"><img class="inline-block h-12 w-12 rounded-full ml-2 mr-6" src="https://ochko.github.io/images/koen-stripe.jpg" alt="L.Ochirkhuyag"></a>
+          
+          
+          <a href="https://ochko.github.io/posts/" class="text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Personal Blog</a>
+          
+          <a href="https://ochko.github.io/tech/" class="bg-gray-100 text-gray-500 hover:text-gray-700 px-3 my-2 py-2 font-medium text-sm rounded-md">Tech stuff</a>
+          
+          
+        </nav>
+      </header>
+      
+
+      <div class="flex-1 pt-10">
+<article class="prose max-w-none">
+  <h1>Хамгийн дажгүй Ruby on Rails IDE</h1>
+  <time class="text-sm text-right text-gray-600" datetime="2007-10-10 19:08:00 &#43;08">2007-10-10</time>
+  <div class="pt-4">
+    <p>Сүүлийн үед <a href="http://www.rubyonrails.org/">Ruby on Rails</a>(RoR) дээр жижиг сажиг юм хийж үзээд, амтанд нь нилээн орчихлоо. Тэгээд RoR ийн хамгийн дажгүй IDE юу байнав гээд хайсан юм. Хамгийн дажгүй нь <a href="http://macromates.com/">TextMate</a> гэж засварлагч дээр <a href="http://wiki.rubyonrails.com/rails/pages/TextMate">Rails Bundle</a> гэдгийг суулгаад янзын гэж байна. Тэр золиг нь даан ч үнэтэй, бас <a href="http://www.apple.com/mac/">Mac</a> дээр ажилладаг эд юм байна. Ер нь RoR дээр юм хийдэг хүмүүс Mac их ашигладаг бололтой юм билээ, яагаад ч юм бүү мэд, мэддэг хүн байвал тайлбарлаж өгөөрэй. За тэгээд <a href="http://www.radrails.org/">RadRails</a> гэж <a href="http://www.eclipse.org/">Eclipse</a> дээр суурилсан нэг юм байна. Eclipse -ийн плагин л даа. Тэр золиг уг нь функцын хувьд их зүгээр юм, даан ч юм л бол гацаж бариад нэг л бишээ, тэгэхээр нь орхичихсон. Дараа нь <a href="http://www.activestate.com/Products/komodo_edit/">Komodo Edit</a> -гэж нэг засварлагч олов, гацаж унтрах нь гайгүй, бас өөр дээрээсээ шэлл рүү хандаж барих боловч, бас л их удаан юм, тэгэхээр нь өөр юу байна гээд хайлаа. Тэгээд сая эртний алдарт текст засварлагч <a href="http://en.wikipedia.org/wiki/Emacs">emacs</a> дээр RoR код бичих <a href="http://dima-exe.ru/rails-on-emacs">заавар</a> олж уншаадахлаа. Түүнийг суулгаад, тохируулаад авсан боломжын байна. Ер нь програм бичихэд нэг л сайн засварлагчийг төгс эзэмших хэрэгтэй гээд байдаг. Урьд нь би юм л бол <a href="http://en.wikipedia.org/wiki/Vi">vi</a> дээр онгойлгочихдог байлаа. Одоо бол emacs. Гацаж барихгүй, гартаа оруулаад авсан цагт бүтээмж асар өндөр гэж байгаа. Өмнө нь нэг удаа бас emacs руу оронгоо алдаад юникод текст гаргаж чадалгүй орхичихсон юм. Тэгсэн сая санаадгүй фонтыг нь fixed гээд сонгосон гараад ирсэн болохоор одоо OK. Ер нь компайл хийдэггүй хэлүүдийн хувьд IDE хэрэглэлээ гээд тэгж их бүтээмж нэмэгдэхгүй байх. Гэхдээ refactoring хийх гэх мэт функцүүдтэй бол IDE мэдээж бүтээмж нэмнэ л дээ. Ямар ч байсан ердийн тэкст файлаас авахуулаад скрипт хэлүүд дээр юм бичихдээ дандаа emacs хэрэглэж байхаар шийдлээ. Дараа emacs-ийн шилдэг чанаруудын талаар нэг бичлэг хийх болно.</p>
+
+  </div>
+</article>
+
+      </div>
+
+      
+<footer class="mt-12">
+  
+  <div class="flex flex-col md:flex-row md:justify-between -mx-2 pt-2 px-2 pb-6 border-t">
+    <div class="md:mr-12 md:w-1/2">
+      
+      <a href="https://ochko.github.io/tech/2007-10-coroutine/" class="block">
+        <span class="block font-semibold text-gray-600">Previous</span>
+        <span class="block">Coroutine</span>
+      </a>
+      
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+      
+      <a href="https://ochko.github.io/tech/2007-09-stardict/" class="block">
+        <span class="block font-semibold text-gray-600">Next</span>
+        <span class="block">Stardict -ийн өөр хоёр толь</span>
+      </a>
+      
+    </div>
+  </div>
+  
+  <div class="text-xs text-center">&copy; 2006-2023 L.Ochirkhuyag</div>
+</footer>
+
+    </div>
+
+    
+    <script defer src="/katex/katex.min.js" ></script>
+    <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+  </body>
+</html>

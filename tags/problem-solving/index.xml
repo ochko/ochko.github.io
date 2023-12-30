@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>problem solving on Ochko</title>
+    <link>https://ochko.github.io/tags/problem-solving/</link>
+    <description>Recent content in problem solving on Ochko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>mn</language>
+    <lastBuildDate>Thu, 11 Oct 2007 19:42:00 +0800</lastBuildDate>
+    <atom:link href="https://ochko.github.io/tags/problem-solving/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coroutine</title>
+      <link>https://ochko.github.io/tech/2007-10-coroutine/</link>
+      <pubDate>Thu, 11 Oct 2007 19:42:00 +0800</pubDate>
+      <guid>https://ochko.github.io/tech/2007-10-coroutine/</guid>
+      <description>Coroutine бол жирийн функц процедурын өргөтгөсөн хэлбэр юм. Функцүүд нэг эхлэлтэй байдаг, өөрөөр хэлбэл функцыг дуудахад эхний мөрөөсөө эхлэн ажилладаг. Харин Coroutine нь олон эхлэлтэй байж болно. Юу гэсэн үг вэ гэвэл, Coroutine-ийг дуудах болгонд өөр өөр мөрөөс эхлэн ажиллаж болдог гэсэн үг. Иймд бидний өдөр тутам хэрэглэдэг функц процедурууд нь Coroutine-ийн нэгэн эгэл тохиолдол.&#xA;Нэгэн жишээ авч үзье. Фибоначийн тоонууд гэдэг нь дарааллын гишүүн нь өмнөх хоёрынхоо нийлбэрээр тодорхойлогддог тоонууд юм.</description>
+    </item>
+    <item>
+      <title>Асуудал тулгарвал</title>
+      <link>https://ochko.github.io/tech/2006-09-problem-solving/</link>
+      <pubDate>Sat, 16 Sep 2006 18:16:00 +0900</pubDate>
+      <guid>https://ochko.github.io/tech/2006-09-problem-solving/</guid>
+      <description>For every realistic complicated problem there will be a simple, understandable inexpensive solution that will be wrong.&#xA;(Ямар ч хэцүү бодит асуудлын хувьд энгийн, ойлгомжтой, хямд боловч буруу шийдэл байж л байдаг.) —H.L.Mencken Шийдэх хэрэгтэй байгаа нөхцөл байдлыг асуудал гэж ерөнхий байдлаар тодорхойлж болно. Асуудлын шийдэх ерөнхий тойм арга техникүүд байдаг ч, хүмүүсийн харилцаанд үүссэн асуудал уу, улс орны хэмжээний асуудал уу, машин техниктэй холбоотой асуудал юмуу гэдгээсээ хамаараад шийдэх арга техник өөр өөрийн онцлогтай байх нь ойлгомжтой.</description>
+    </item>
+  </channel>
+</rss>
