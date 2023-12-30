@@ -146,9 +146,6 @@ If we want to be serious about quality, it is time to get tired of finding bugs 
 
     <script defer src="/katex/katex.min.js" ></script>
     <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-    <script defer src="/pagefind/pagefind-ui.js" ></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });
-    </script>
+    <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showSubResults: true });"></script>
   </body>
 </html>

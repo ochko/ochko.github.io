@@ -105,9 +105,6 @@ Stardict нь Linux, FreeBSD, Solaris, Win32 -бүгдэн дээр нь ажи�
 
     <script defer src="/katex/katex.min.js" ></script>
     <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-    <script defer src="/pagefind/pagefind-ui.js" ></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', (event) => { new PagefindUI({ element: "#search", showSubResults: true }); });
-    </script>
+    <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showSubResults: true });"></script>
   </body>
 </html>
